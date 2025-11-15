@@ -1,0 +1,116 @@
+/* ===================================
+   CONTACT PAGE - MAIN STYLESHEET
+   Sky Design Solutions
+   Modular CSS Architecture
+   =================================== */
+
+/* Import Section Stylesheets */
+@import url('sections/hero-section.css');
+@import url('sections/contact-form-section.css');
+@import url('sections/locations-section.css');
+@import url('sections/faq-section.css');
+
+/* ===================================
+   GLOBAL CONTACT PAGE STYLES
+   =================================== */
+
+/* Main Content Container */
+.main-content {
+    margin-top: 0;
+    padding-top: 0;
+    background: #FFFFFF;
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection Color */
+::selection {
+    background: #B8D432;
+    color: #053333;
+}
+
+::-moz-selection {
+    background: #B8D432;
+    color: #053333;
+}
+
+/* Loading Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Utility Classes */
+.animate-in {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.text-brand-dark {
+    color: #053333;
+}
+
+.text-brand-green {
+    color: #B8D432;
+}
+
+.bg-brand-dark {
+    background: #053333;
+}
+
+.bg-brand-green {
+    background: #B8D432;
+}
+
+.bg-brand-light {
+    background: #F4F5F5;
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Focus States for Accessibility */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #B8D432;
+    outline-offset: 2px;
+}
+
+/* Smooth Transitions */
+* {
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Remove Default Margins */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* ===================================
+   END OF MAIN STYLESHEET
+   =================================== */

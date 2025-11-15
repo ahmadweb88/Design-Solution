@@ -1,0 +1,467 @@
+/* ============================================================
+   ABOUT TEAM SECTION - Professional Bootstrap Carousel
+   ============================================================ */
+
+/* Team Section Container */
+.skydesignsol-about-team {
+    background: linear-gradient(135deg, #F4F5F5 0%, #ffffff 100%);
+    padding: clamp(60px, 8vw, 100px) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative Background Elements */
+.skydesignsol-about-team::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(184, 212, 50, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.skydesignsol-about-team::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(5, 51, 51, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* Section Title */
+.skydesignsol-about-team-title {
+    color: #053333;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.skydesignsol-about-team-subtitle {
+    color: #161616;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 400;
+    opacity: 0.7;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Carousel Container */
+#teamCarousel {
+    position: relative;
+    z-index: 1;
+}
+
+/* Carousel Card */
+.skydesignsol-team-carousel-card {
+    background: white;
+    border-radius: 24px;
+    padding: clamp(30px, 4vw, 50px);
+    box-shadow: 0 10px 40px rgba(5, 51, 51, 0.08);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+.skydesignsol-team-carousel-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #B8D432 0%, #053333 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.carousel-item.active .skydesignsol-team-carousel-card::before {
+    transform: scaleX(1);
+    transition-delay: 0.3s;
+}
+
+.skydesignsol-team-carousel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(5, 51, 51, 0.15);
+}
+
+/* Team Image */
+.skydesignsol-team-carousel-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(5, 51, 51, 0.15);
+    aspect-ratio: 1/1;
+}
+
+.skydesignsol-team-carousel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skydesignsol-team-carousel-card:hover .skydesignsol-team-carousel-image img {
+    transform: scale(1.05);
+}
+
+/* Team Badge */
+.skydesignsol-team-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, #B8D432 0%, #9AB82E 100%);
+    color: #053333;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 8px 20px rgba(184, 212, 50, 0.4);
+    animation: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation-delay: 0.4s;
+    animation-fill-mode: both;
+}
+
+.skydesignsol-team-badge i {
+    font-size: 16px;
+}
+
+/* Team Content */
+.skydesignsol-team-carousel-content {
+    position: relative;
+    padding-left: clamp(0px, 2vw, 20px);
+}
+
+/* Team Number */
+.skydesignsol-team-number {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(80px, 10vw, 120px);
+    font-weight: 800;
+    color: #053333;
+    opacity: 0.05;
+    line-height: 1;
+    user-select: none;
+    z-index: 0;
+}
+
+/* Team Name */
+.skydesignsol-team-carousel-name {
+    color: #053333;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 700;
+    margin-bottom: 8px;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+}
+
+/* Team Role */
+.skydesignsol-team-carousel-role {
+    color: #B8D432;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
+}
+
+/* Team Description */
+.skydesignsol-team-carousel-desc {
+    color: #161616;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(15px, 1.8vw, 18px);
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    opacity: 0.85;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation-delay: 0.4s;
+    animation-fill-mode: both;
+}
+
+/* Social Links */
+.skydesignsol-team-social {
+    display: flex;
+    gap: 12px;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+.skydesignsol-team-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: #F4F5F5;
+    color: #053333;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    text-decoration: none;
+    border: 2px solid transparent;
+}
+
+.skydesignsol-team-social a:hover {
+    background: #053333;
+    color: #B8D432;
+    border-color: #B8D432;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(5, 51, 51, 0.25);
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+    bottom: -50px;
+    margin-bottom: 0;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #E0E0E0;
+    border: none;
+    opacity: 1;
+    transition: all 0.3s ease;
+    margin: 0 6px;
+}
+
+.carousel-indicators .active {
+    background-color: #B8D432;
+    width: 32px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(184, 212, 50, 0.4);
+}
+
+/* Custom Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+
+.carousel-control-prev {
+    left: -80px;
+}
+
+.carousel-control-next {
+    right: -80px;
+}
+
+.skydesignsol-carousel-control-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    color: #053333;
+    font-size: 24px;
+    box-shadow: 0 8px 24px rgba(5, 51, 51, 0.15);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 2px solid transparent;
+}
+
+.carousel-control-prev:hover .skydesignsol-carousel-control-icon,
+.carousel-control-next:hover .skydesignsol-carousel-control-icon {
+    background: #053333;
+    color: #B8D432;
+    border-color: #B8D432;
+    transform: scale(1.1);
+    box-shadow: 0 12px 32px rgba(5, 51, 51, 0.25);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) {
+    .carousel-control-prev {
+        left: -30px;
+    }
+
+    .carousel-control-next {
+        right: -30px;
+    }
+
+    .skydesignsol-carousel-control-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .skydesignsol-team-carousel-card {
+        padding: 30px;
+    }
+
+    .skydesignsol-team-number {
+        font-size: 80px;
+        top: -10px;
+    }
+}
+
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+    .skydesignsol-about-team {
+        padding: 50px 0 80px;
+    }
+
+    .skydesignsol-team-carousel-card {
+        padding: 25px;
+    }
+
+    .skydesignsol-team-carousel-image {
+        margin-bottom: 30px;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .skydesignsol-team-carousel-content {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .skydesignsol-team-number {
+        display: none;
+    }
+
+    .skydesignsol-team-social {
+        justify-content: center;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+
+    .carousel-indicators {
+        bottom: -60px;
+    }
+
+    .skydesignsol-team-badge {
+        bottom: 15px;
+        left: 15px;
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .skydesignsol-team-badge i {
+        font-size: 14px;
+    }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .skydesignsol-team-carousel-card {
+        padding: 20px;
+    }
+
+    .skydesignsol-team-carousel-desc {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .skydesignsol-team-social a {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+/* Carousel Transition Effects */
+.carousel-item {
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Reset any previous animations when item becomes inactive */
+.carousel-item:not(.active) .skydesignsol-team-carousel-name,
+.carousel-item:not(.active) .skydesignsol-team-carousel-role,
+.carousel-item:not(.active) .skydesignsol-team-carousel-desc,
+.carousel-item:not(.active) .skydesignsol-team-social,
+.carousel-item:not(.active) .skydesignsol-team-badge {
+    animation: none;
+    opacity: 0;
+}
+
+/* Accessibility */
+.carousel-control-prev:focus .skydesignsol-carousel-control-icon,
+.carousel-control-next:focus .skydesignsol-carousel-control-icon {
+    outline: 2px solid #B8D432;
+    outline-offset: 4px;
+}
+
+/* Loading State */
+.skydesignsol-team-carousel-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+    transform: translateX(-100%);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.skydesignsol-team-carousel-image img {
+    position: relative;
+    z-index: 1;
+}

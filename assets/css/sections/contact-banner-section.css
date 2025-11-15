@@ -1,0 +1,539 @@
+/* ============================================================
+   CONTACT BANNER SECTION - Professional Bootstrap Light Theme
+   ============================================================ */
+
+/* Section Container */
+.skydesignsol-contact-banner {
+    background: linear-gradient(135deg, #F9FAFB 0%, #ffffff 100%);
+    padding: clamp(70px, 10vw, 120px) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative Background Elements */
+.skydesignsol-contact-banner::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(184, 212, 50, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+    animation: float 20s ease-in-out infinite;
+}
+
+.skydesignsol-contact-banner::after {
+    content: '';
+    position: absolute;
+    bottom: -150px;
+    left: -150px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(5, 51, 51, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+    animation: float 25s ease-in-out infinite reverse;
+}
+
+/* ============================================================
+   SECTION HEADER
+   ============================================================ */
+
+.skydesignsol-banner-title {
+    color: #053333;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.skydesignsol-banner-subtitle {
+    color: #161616;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 400;
+    opacity: 0.7;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================================
+   CONTACT QUICK LINKS CARDS
+   ============================================================ */
+
+.skydesignsol-banner-contact-card {
+    background: white;
+    border-radius: 20px;
+    padding: clamp(30px, 4vw, 40px);
+    box-shadow: 0 8px 30px rgba(5, 51, 51, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.skydesignsol-banner-contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(184, 212, 50, 0.05) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+.skydesignsol-banner-contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 50px rgba(5, 51, 51, 0.15);
+    border-color: rgba(184, 212, 50, 0.3);
+}
+
+.skydesignsol-banner-contact-card:hover::before {
+    opacity: 1;
+}
+
+/* Contact Icon */
+.skydesignsol-banner-icon {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    background: linear-gradient(135deg, #B8D432 0%, #9AB82E 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(184, 212, 50, 0.3);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skydesignsol-banner-icon i {
+    font-size: 28px;
+    color: #053333;
+}
+
+.skydesignsol-banner-contact-card:hover .skydesignsol-banner-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 12px 30px rgba(184, 212, 50, 0.5);
+}
+
+/* Contact Content */
+.skydesignsol-banner-contact-content {
+    flex: 1;
+}
+
+.skydesignsol-banner-contact-title {
+    color: #053333;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.skydesignsol-banner-contact-link {
+    color: #B8D432;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.skydesignsol-banner-contact-link:hover {
+    color: #053333;
+    transform: translateX(5px);
+}
+
+/* ============================================================
+   CALENDLY SECTION
+   ============================================================ */
+
+.skydesignsol-banner-calendly-wrapper {
+    background: white;
+    border-radius: 24px;
+    padding: clamp(30px, 4vw, 40px);
+    box-shadow: 0 10px 40px rgba(5, 51, 51, 0.1);
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skydesignsol-banner-calendly-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #B8D432 0%, #053333 100%);
+    border-radius: 24px 24px 0 0;
+}
+
+.skydesignsol-banner-calendly-wrapper:hover {
+    box-shadow: 0 15px 50px rgba(5, 51, 51, 0.15);
+}
+
+.skydesignsol-banner-section-title {
+    color: #053333;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.skydesignsol-banner-section-title i {
+    color: #B8D432;
+    font-size: clamp(24px, 3vw, 28px);
+}
+
+.skydesignsol-banner-section-desc {
+    color: #161616;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(15px, 1.8vw, 18px);
+    font-weight: 400;
+    opacity: 0.7;
+    margin-bottom: 0;
+}
+
+.skydesignsol-banner-calendly-container {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(5, 51, 51, 0.08);
+    background: #F9FAFB;
+}
+
+/* ============================================================
+   LOCATIONS SECTION
+   ============================================================ */
+
+.skydesignsol-banner-locations-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.skydesignsol-banner-locations-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Location Card */
+.skydesignsol-banner-location-card {
+    background: white;
+    border-radius: 16px;
+    padding: clamp(20px, 3vw, 24px);
+    box-shadow: 0 6px 20px rgba(5, 51, 51, 0.06);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.skydesignsol-banner-location-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #B8D432 0%, #053333 100%);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skydesignsol-banner-location-card:hover {
+    transform: translateX(8px);
+    box-shadow: 0 10px 30px rgba(5, 51, 51, 0.12);
+    border-color: rgba(184, 212, 50, 0.2);
+}
+
+.skydesignsol-banner-location-card:hover::before {
+    transform: scaleY(1);
+}
+
+/* Location Icon */
+.skydesignsol-banner-location-icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    background: #F9FAFB;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skydesignsol-banner-location-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skydesignsol-banner-location-card:hover .skydesignsol-banner-location-icon {
+    background: rgba(184, 212, 50, 0.1);
+}
+
+.skydesignsol-banner-location-card:hover .skydesignsol-banner-location-icon img {
+    transform: scale(1.1);
+}
+
+/* Location Content */
+.skydesignsol-banner-location-content {
+    flex: 1;
+}
+
+.skydesignsol-banner-location-title {
+    color: #053333;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(18px, 2.2vw, 22px);
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.skydesignsol-banner-location-address {
+    color: #161616;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(14px, 1.6vw, 16px);
+    font-weight: 400;
+    line-height: 1.6;
+    opacity: 0.7;
+    margin-bottom: 0;
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll Animation */
+.skydesignsol-banner-contact-card,
+.skydesignsol-banner-calendly-wrapper,
+.skydesignsol-banner-location-card {
+    animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation-fill-mode: both;
+}
+
+.skydesignsol-banner-contact-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.skydesignsol-banner-contact-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.skydesignsol-banner-calendly-wrapper {
+    animation-delay: 0.3s;
+}
+
+.skydesignsol-banner-location-card:nth-child(1) {
+    animation-delay: 0.4s;
+}
+
+.skydesignsol-banner-location-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.skydesignsol-banner-location-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.skydesignsol-banner-location-card:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) {
+    .skydesignsol-contact-banner {
+        padding: 60px 0;
+    }
+
+    .skydesignsol-banner-contact-card {
+        padding: 30px;
+    }
+
+    .skydesignsol-banner-icon {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+    }
+
+    .skydesignsol-banner-icon i {
+        font-size: 24px;
+    }
+
+    .skydesignsol-banner-calendly-container {
+        height: 600px !important;
+    }
+
+    .skydesignsol-banner-locations-grid {
+        margin-top: 30px;
+    }
+}
+
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+    .skydesignsol-contact-banner {
+        padding: 50px 0;
+    }
+
+    .skydesignsol-banner-contact-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .skydesignsol-banner-icon {
+        width: 70px;
+        height: 70px;
+        min-width: 70px;
+    }
+
+    .skydesignsol-banner-calendly-wrapper,
+    .skydesignsol-banner-locations-wrapper {
+        padding: 25px;
+    }
+
+    .skydesignsol-banner-calendly-container {
+        height: 550px !important;
+    }
+
+    .skydesignsol-banner-location-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .skydesignsol-banner-location-icon {
+        width: 70px;
+        height: 70px;
+        min-width: 70px;
+        margin: 0 auto;
+    }
+
+    .skydesignsol-banner-locations-grid {
+        gap: 16px;
+    }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .skydesignsol-banner-contact-card {
+        padding: 20px;
+    }
+
+    .skydesignsol-banner-icon {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+    }
+
+    .skydesignsol-banner-icon i {
+        font-size: 24px;
+    }
+
+    .skydesignsol-banner-contact-link {
+        font-size: 18px;
+    }
+
+    .skydesignsol-banner-calendly-container {
+        height: 500px !important;
+    }
+
+    .skydesignsol-banner-section-title {
+        font-size: 20px;
+    }
+
+    .skydesignsol-banner-location-card {
+        padding: 16px;
+    }
+
+    .skydesignsol-banner-location-icon {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+    }
+}
+
+/* ============================================================
+   ACCESSIBILITY
+   ============================================================ */
+
+/* Focus States */
+.skydesignsol-banner-contact-link:focus,
+.skydesignsol-banner-location-card:focus {
+    outline: 3px solid #B8D432;
+    outline-offset: 4px;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .skydesignsol-contact-banner::before,
+    .skydesignsol-contact-banner::after {
+        animation: none;
+    }
+
+    .skydesignsol-banner-contact-card,
+    .skydesignsol-banner-calendly-wrapper,
+    .skydesignsol-banner-location-card {
+        animation: none;
+    }
+
+    .skydesignsol-banner-contact-card:hover,
+    .skydesignsol-banner-location-card:hover {
+        transform: none;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .skydesignsol-banner-contact-card,
+    .skydesignsol-banner-calendly-wrapper,
+    .skydesignsol-banner-location-card {
+        border: 2px solid #053333;
+    }
+}

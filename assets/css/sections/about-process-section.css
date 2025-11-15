@@ -1,0 +1,556 @@
+/* ============================================================
+   ABOUT PROCESS SECTION - Professional Bootstrap Timeline
+   ============================================================ */
+
+/* Section Container */
+.skydesignsol-about-process {
+    background: linear-gradient(135deg, #053333 0%, #074747 100%);
+    padding: clamp(60px, 8vw, 120px) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative Background Elements */
+.skydesignsol-about-process::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(184, 212, 50, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+    animation: float 20s ease-in-out infinite;
+}
+
+.skydesignsol-about-process::after {
+    content: '';
+    position: absolute;
+    bottom: -150px;
+    left: -150px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(184, 212, 50, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+    animation: float 25s ease-in-out infinite reverse;
+}
+
+/* Section Header */
+.skydesignsol-about-process-title {
+    color: #ffffff;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.skydesignsol-about-process-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Process Timeline Container */
+.skydesignsol-process-timeline {
+    position: relative;
+    z-index: 1;
+    margin-top: clamp(40px, 6vw, 80px);
+}
+
+/* Process Step */
+.skydesignsol-process-step {
+    margin-bottom: clamp(60px, 8vw, 100px);
+    position: relative;
+}
+
+.skydesignsol-process-step:last-child {
+    margin-bottom: 0;
+}
+
+/* Process Card */
+.skydesignsol-process-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: clamp(30px, 4vw, 50px);
+    border: 2px solid rgba(184, 212, 50, 0.1);
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    height: 100%;
+}
+
+.skydesignsol-process-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(184, 212, 50, 0.1) 0%, transparent 50%);
+    border-radius: 24px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+}
+
+.skydesignsol-process-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(184, 212, 50, 0.4);
+    box-shadow: 0 20px 60px rgba(184, 212, 50, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.skydesignsol-process-card:hover::before {
+    opacity: 1;
+}
+
+/* Step Badge with Number */
+.skydesignsol-process-step-badge {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 2;
+}
+
+.skydesignsol-step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #B8D432 0%, #9AB82E 100%);
+    color: #053333;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    border-radius: 50%;
+    box-shadow: 0 8px 24px rgba(184, 212, 50, 0.3);
+    position: relative;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Timeline Connecting Line */
+.skydesignsol-step-line {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 80px;
+    background: linear-gradient(180deg, #B8D432 0%, transparent 100%);
+    margin-top: 20px;
+}
+
+.skydesignsol-step-last .skydesignsol-step-line {
+    display: none;
+}
+
+/* Process Content */
+.skydesignsol-process-content {
+    position: relative;
+    z-index: 1;
+    padding-right: 90px;
+}
+
+/* Process Icon/GIF */
+.skydesignsol-process-icon {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 24px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(184, 212, 50, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.skydesignsol-process-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Card Title */
+.skydesignsol-process-card-title {
+    color: #ffffff;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.skydesignsol-process-card-title i {
+    color: #B8D432;
+    font-size: clamp(24px, 3vw, 32px);
+}
+
+/* Card Description */
+.skydesignsol-process-card-desc {
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(15px, 1.8vw, 18px);
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+/* Feature Tags */
+.skydesignsol-process-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skydesignsol-feature-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(184, 212, 50, 0.15);
+    color: #B8D432;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 1px solid rgba(184, 212, 50, 0.3);
+    transition: all 0.3s ease;
+}
+
+.skydesignsol-feature-tag:hover {
+    background: rgba(184, 212, 50, 0.25);
+    transform: translateY(-2px);
+}
+
+.skydesignsol-feature-tag i {
+    font-size: 14px;
+}
+
+/* Visual Decorations */
+.skydesignsol-process-visual {
+    position: relative;
+    height: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skydesignsol-visual-circle {
+    width: 300px;
+    height: 300px;
+    border: 3px solid rgba(184, 212, 50, 0.3);
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 20s linear infinite;
+}
+
+.skydesignsol-visual-circle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border: 2px solid rgba(184, 212, 50, 0.2);
+    border-radius: 50%;
+    animation: rotate 15s linear infinite reverse;
+}
+
+.skydesignsol-visual-circle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(184, 212, 50, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.skydesignsol-visual-dots {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.skydesignsol-visual-dots::before,
+.skydesignsol-visual-dots::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #B8D432;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(184, 212, 50, 0.5);
+}
+
+.skydesignsol-visual-dots::before {
+    top: 20%;
+    left: 30%;
+    animation: float 3s ease-in-out infinite;
+}
+
+.skydesignsol-visual-dots::after {
+    bottom: 30%;
+    right: 25%;
+    animation: float 4s ease-in-out infinite reverse;
+}
+
+/* Process CTA */
+.skydesignsol-process-cta {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: clamp(40px, 5vw, 60px);
+    border: 2px solid rgba(184, 212, 50, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.skydesignsol-process-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #B8D432 0%, #053333 100%);
+}
+
+.skydesignsol-process-cta-title {
+    color: #ffffff;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.skydesignsol-process-cta-desc {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(15px, 1.8vw, 18px);
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+.skydesignsol-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #B8D432 0%, #9AB82E 100%);
+    color: #053333;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(184, 212, 50, 0.3);
+}
+
+.skydesignsol-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(184, 212, 50, 0.4);
+    background: linear-gradient(135deg, #9AB82E 0%, #B8D432 100%);
+    color: #053333;
+}
+
+.skydesignsol-btn-primary i {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.skydesignsol-btn-primary:hover i {
+    transform: translateX(5px);
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 8px 24px rgba(184, 212, 50, 0.3);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 12px 32px rgba(184, 212, 50, 0.5);
+    }
+}
+
+/* Responsive Design */
+
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) {
+    .skydesignsol-process-content {
+        padding-right: 0;
+    }
+
+    .skydesignsol-process-step-badge {
+        right: 20px;
+    }
+
+    .skydesignsol-step-number {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .skydesignsol-process-visual {
+        min-height: 300px;
+        margin-top: 30px;
+    }
+
+    .skydesignsol-visual-circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .skydesignsol-visual-circle::before {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+    .skydesignsol-about-process {
+        padding: 50px 0;
+    }
+
+    .skydesignsol-process-card {
+        padding: 25px;
+    }
+
+    .skydesignsol-process-content {
+        padding-right: 0;
+    }
+
+    .skydesignsol-process-step-badge {
+        position: static;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .skydesignsol-step-line {
+        left: 50%;
+        height: 60px;
+    }
+
+    .skydesignsol-process-icon {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 20px;
+    }
+
+    .skydesignsol-process-card-title {
+        text-align: center;
+        justify-content: center;
+        font-size: 24px;
+    }
+
+    .skydesignsol-process-card-desc {
+        text-align: center;
+    }
+
+    .skydesignsol-process-features {
+        justify-content: center;
+    }
+
+    .skydesignsol-process-visual {
+        display: none;
+    }
+
+    .skydesignsol-process-cta {
+        padding: 30px 20px;
+    }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .skydesignsol-step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .skydesignsol-process-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .skydesignsol-feature-tag {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .skydesignsol-btn-primary {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Scroll Animation */
+.skydesignsol-process-step {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.skydesignsol-process-step:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.skydesignsol-process-step:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.skydesignsol-process-step:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.skydesignsol-process-step:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

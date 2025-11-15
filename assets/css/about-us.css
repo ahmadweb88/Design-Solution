@@ -1,0 +1,71 @@
+/* ============================================
+   ABOUT US PAGE - MAIN CSS FILE
+   Sky Design Solutions
+   ============================================
+
+   This file imports all modular section CSS files
+   for the About Us page.
+
+   ============================================ */
+
+/* Import Section-Specific Styles */
+@import url('sections/hero-section.css');
+@import url('sections/about-stats-section.css');
+@import url('sections/partners-section.css');
+@import url('sections/about-quote-section.css');
+@import url('sections/about-team-section.css');
+@import url('sections/about-process-section.css');
+@import url('sections/final-cta-section.css');
+@import url('sections/faq-section.css');
+@import url('sections/contact-banner-section.css');
+/* ============================================
+   BRAND UTILITY CLASSES
+   ============================================ */
+
+.skydesignsol-brand-primary {
+  color: #053333;
+}
+
+.skydesignsol-brand-accent {
+  color: #B8D432;
+}
+
+.skydesignsol-bg-primary {
+  background-color: #053333;
+}
+
+.skydesignsol-bg-accent {
+  background-color: #B8D432;
+}
+
+.skydesignsol-bg-light {
+  background-color: #F4F5F5;
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+/* Focus states for keyboard navigation */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #B8D432;
+  outline-offset: 2px;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

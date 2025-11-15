@@ -1,0 +1,2608 @@
+/*
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                                                                               ║
+║                           SKY DESIGN SOLUTIONS                                ║
+║                         Professional Stylesheet v2.0                          ║
+║                         ✨ Bootstrap 5 Integrated ✨                          ║
+║                                                                               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+Author: Sky Design Solutions Team
+Version: 2.0.0 (Bootstrap 5 Edition)
+Last Updated: 2025
+Description: Main stylesheet for Sky Design Solutions website
+Bootstrap Version: 5.3.2
+Bootstrap Icons: 1.11.3
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TABLE OF CONTENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. GLOBAL BASE STYLES
+   1.1 Reset & Root Variables
+   1.2 HTML & Body Defaults
+   1.3 Main Content Container
+
+2. NAVIGATION
+   2.1 Navbar Structure
+   2.2 Logo Styling
+   2.3 Navigation Links
+   2.4 CTA Buttons
+   2.5 Mobile Menu
+   2.6 Responsive Breakpoints
+
+3. HERO SECTION
+   3.1 Hero Layout
+   3.2 Hero Content
+   3.3 Hero Animations
+   3.4 Hero Responsive
+
+4. FEATURES SECTION
+   4.1 Features Grid
+   4.2 Feature Cards
+   4.3 Features Responsive
+
+5. CONTACT CTA SECTION
+   5.1 CTA Layout
+   5.2 CTA Button
+   5.3 CTA Responsive
+
+6. FOOTER
+   6.1 Footer Structure
+   6.2 Footer Navigation
+   6.3 Footer Social
+   6.4 Footer Responsive
+
+7. STICKY CTA BAR
+   7.1 Bar Structure
+   7.2 Bar Animations
+   7.3 Bar Responsive
+
+8. UTILITY CLASSES & ANIMATIONS
+   8.1 Keyframe Animations
+   8.2 Accessibility
+   8.3 Print Styles
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+*/
+
+
+/* ============================================
+   1. GLOBAL BASE STYLES
+   ============================================ */
+
+/* ──────────────────────────────────────────
+   1.1 Universal Reset
+   ────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ──────────────────────────────────────────
+   1.2 Root Variables (CSS Custom Properties)
+   Bootstrap Custom Theme Variables
+   ────────────────────────────────────────── */
+:root {
+    /* Brand Colors */
+    --color-primary: #053333;
+    --color-secondary: #B8D432;
+    --color-text: #F4F5F5;
+    --color-dark: #000000;
+    --color-white: #FFFFFF;
+    --font-primary: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --nav-height: 74px;
+
+    /* Bootstrap Custom Theme Overrides */
+    --bs-primary: #053333;
+    --bs-secondary: #B8D432;
+    --bs-font-sans-serif: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-color: #053333;
+    --bs-body-bg: #F4F5F5;
+}
+
+/* ──────────────────────────────────────────
+   1.3 HTML & Body Defaults
+   ────────────────────────────────────────── */
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+    background: #F4F5F5;
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding-top: var(--nav-height);
+}
+
+/* ──────────────────────────────────────────
+   1.4 Main Content Container
+   ────────────────────────────────────────── */
+
+.main-content {
+    width: 100%;
+    min-height: calc(100vh - var(--nav-height));
+}
+
+/* ──────────────────────────────────────────
+   1.5 Bootstrap Component Overrides
+   ────────────────────────────────────────── */
+
+/* Bootstrap Button Primary Override */
+.btn-primary {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #C5E138;
+    border-color: #C5E138;
+    color: var(--color-primary);
+}
+
+/* Bootstrap Button Outline Primary Override */
+.btn-outline-primary {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Bootstrap Card Hover Effect */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Bootstrap Navbar Collapse Override */
+.navbar-collapse {
+    background-color: inherit;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: var(--color-primary);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+    }
+}
+
+/* ============================================
+   2. NAVIGATION
+   ============================================ */
+
+/* ──────────────────────────────────────────
+   2.1 Navbar Structure & Reset
+   ────────────────────────────────────────── */
+
+.skydesignsol-navbar,
+.skydesignsol-navbar *,
+.skydesignsol-overlay {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.skydesignsol-navbar {
+      background: #053333;
+      padding: 16px 40px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      animation: skydesignsol-slide-down 0.6s ease-out;
+      font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      transition: transform 0.3s ease-in-out;
+  }
+
+  /* Hidden state for navbar on scroll down */
+  .skydesignsol-navbar.skydesignsol-nav-hidden {
+      transform: translateY(-100%) !important;
+  }
+
+  /* WordPress Compatibility - Ensure navbar works with admin bar */
+  .admin-bar .skydesignsol-navbar {
+      top: 32px;
+  }
+
+  @media screen and (max-width: 782px) {
+      .admin-bar .skydesignsol-navbar {
+          top: 46px;
+      }
+  }
+
+  /* WordPress - Force navbar to work in WordPress environment */
+  body.wp-admin .skydesignsol-navbar,
+  body.logged-in .skydesignsol-navbar,
+  .wp-site-blocks .skydesignsol-navbar {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      z-index: 9999 !important;
+  }
+
+  /* WordPress logged-in admin bar adjustment */
+  body.logged-in.admin-bar .skydesignsol-navbar {
+      top: 32px !important;
+  }
+
+  @media screen and (max-width: 782px) {
+      body.logged-in.admin-bar .skydesignsol-navbar {
+          top: 46px !important;
+      }
+  }
+  
+  @keyframes skydesignsol-slide-down {
+      from {
+          transform: translateY(-100%);
+          opacity: 0;
+      }
+      to {
+          transform: translateY(0);
+          opacity: 1;
+      }
+  }
+  
+/* ──────────────────────────────────────────
+   2.2 Navigation Container
+   ────────────────────────────────────────── */
+
+.skydesignsol-nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      max-width: 1800px !important;
+      margin: 0 auto;
+      position: relative;
+      width: 100%;
+      padding: 0 clamp(20px, 4vw, 40px);
+      position: initial;
+  }
+  
+  /* Center the navigation links - Desktop only */
+  @media (max-width: 991.98px) {
+      .skydesignsol-nav-links {
+          position: absolute !important;
+          left: 50% !important;
+          transform: translateX(-50%) !important;
+      }
+  }
+  
+/* ──────────────────────────────────────────
+   2.3 Logo Styling
+   ────────────────────────────────────────── */
+
+.skydesignsol-logo {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      height: 42px !important;
+      width: auto !important;
+      max-height: 42px !important;
+      text-decoration: none;
+      overflow: hidden;
+  }
+  
+  .skydesignsol-logo-svg,
+  .skydesignsol-logo-img,
+  .skydesignsol-logo svg,
+  .skydesignsol-logo img {
+      height: 42px !important;
+      width: auto !important;
+      max-height: 42px !important;
+      max-width: 200px !important;
+      display: block !important;
+      outline: none !important;
+      border: none !important;
+      background: transparent !important;
+      object-fit: contain !important;
+  }
+  
+  /* Hide placeholder objects */
+  .skydesignsol-logo object,
+  .skydesignsol-logo embed {
+      display: none !important;
+  }
+
+  /* Force override any inline SVG styles */
+  .skydesignsol-logo svg[style],
+  .skydesignsol-logo-svg[style] {
+      width: auto !important;
+      height: 42px !important;
+      max-height: 42px !important;
+      max-width: 200px !important;
+      object-fit: contain !important;
+  }
+
+  /* Prevent SVG scaling issues */
+  .skydesignsol-logo svg {
+      transform: none !important;
+      transform-origin: left center !important;
+      flex-shrink: 0 !important;
+  }
+  
+/* ──────────────────────────────────────────
+   2.4 Navigation Links
+   ────────────────────────────────────────── */
+
+.skydesignsol-nav-links {
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px;
+      list-style: none;
+      animation: skydesignsol-fade-in 1s ease-out 0.3s backwards;
+  }
+  
+  @keyframes skydesignsol-fade-in {
+      from {
+          opacity: 0;
+          transform: translateY(-10px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+  
+  .skydesignsol-nav-item {
+      position: relative;
+  }
+  
+  .skydesignsol-nav-link {
+      display: block;
+      padding: 12px 16px;
+      color: #F4F5F5;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 400;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+  }
+  
+  .skydesignsol-nav-link::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: #B8D432;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      transform: translateX(-50%);
+  }
+  
+  .skydesignsol-nav-link:hover::before,
+  .skydesignsol-nav-link.active::before {
+      width: 80%;
+  }
+  
+  .navbar-nav .skydesignsol-nav-link.active {
+      color: #B8D432;
+      font-weight: 600;
+  }
+  
+  .skydesignsol-nav-link:hover {
+      color: #B8D432;
+      background: rgba(184, 212, 50, 0.1);
+      transform: translateY(-2px);
+  }
+  
+/* ──────────────────────────────────────────
+   2.5 CTA Button (with animated border)
+   ────────────────────────────────────────── */
+
+.skydesignsol-cta-button {
+      background: #B8D432;
+      color: #053333;
+      padding: 14px 32px;
+      border-radius: 100px;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: solid 3px transparent;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 15px rgba(184, 212, 50, 0.3);
+      position: relative;
+      overflow: visible;
+      z-index: 1;
+      animation: skydesignsol-fade-in-right 0.8s ease-out;
+      display: inline-block;
+  }
+
+  /* Ensure inner content sits above decorative layers */
+  .skydesignsol-cta-button > * {
+      position: relative;
+      z-index: 1;
+  }
+  
+  @keyframes skydesignsol-fade-in-right {
+      from {
+          transform: translateX(30px);
+          opacity: 0;
+      }
+      to {
+          transform: translateX(0);
+          opacity: 1;
+      }
+  }
+  
+  .skydesignsol-cta-button::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(5, 51, 51, 0.1);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s ease, height 0.6s ease;
+      /* Place ripple between background and text */
+      z-index: 0;
+      pointer-events: none;
+  }
+  
+  .skydesignsol-cta-button:hover::before {
+      width: 0;
+      height: 0;
+  }
+  
+  .skydesignsol-cta-button:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 25px rgba(184, 212, 50, 0.5);
+      opacity: 1;
+      background-color: #B8D432;
+  }
+
+  .skydesignsol-cta-button:hover::after {
+      animation-duration: 2s;
+  }
+  
+  .skydesignsol-cta-button:active {
+      transform: translateY(-1px) scale(1.02);
+      opacity: 1;
+  }
+
+  .skydesignsol-cta-button:active::after {
+      animation-duration: 1.5s;
+  }
+
+  /* Extra safety for CTA visibility across states */
+  .skydesignsol-cta-button,
+  .skydesignsol-cta-button:focus,
+  .skydesignsol-cta-button:focus-visible {
+      opacity: 1;
+  }
+
+  /* Animated border using pseudo-element */
+  .skydesignsol-cta-button::after {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 100px;
+      padding: 3px;
+      background: conic-gradient(
+          from var(--border-angle),
+          #F4F5F5 0%,
+          transparent 30%,
+          transparent 70%,
+          #F4F5F5 100%
+      );
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      animation: mw-border-spin 3s linear infinite;
+      pointer-events: none;
+      z-index: -1;
+  }
+
+  /* Apply the same subtle looping border to large CTA by default (hover unchanged) */
+  .skydesignsol-cta-button-large::after {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 100px;
+      padding: 3px;
+      background: conic-gradient(
+          from var(--border-angle),
+          #F4F5F5 0%,
+          transparent 30%,
+          transparent 70%,
+          #F4F5F5 100%
+      );
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      animation: mw-border-spin 3s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+  }
+
+  /* CSS Custom Property for animated border */
+  @property --border-angle {
+      syntax: "<angle>";
+      inherits: true;
+      initial-value: 0turn;
+  }
+
+  @keyframes mw-border-spin {
+      to {
+          --border-angle: 1turn;
+      }
+  }
+  
+/* ──────────────────────────────────────────
+   2.6 Mobile Menu Button
+   ────────────────────────────────────────── */
+
+.skydesignsol-mobile-menu-btn {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1001;
+  }
+
+  .skydesignsol-mobile-menu-btn:focus{
+    box-shadow: none;
+  }
+  
+  .skydesignsol-menu-bar {
+      width: 28px;
+      height: 3px;
+      background: #B8D432;
+      transition: all 0.3s ease;
+      border-radius: 3px;
+  }
+  
+  .skydesignsol-mobile-menu-btn.skydesignsol-active .skydesignsol-menu-bar:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 8px);
+  }
+  
+  .skydesignsol-mobile-menu-btn.skydesignsol-active .skydesignsol-menu-bar:nth-child(2) {
+      opacity: 0;
+  }
+  
+  .skydesignsol-mobile-menu-btn.skydesignsol-active .skydesignsol-menu-bar:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+  }
+  
+/* ──────────────────────────────────────────
+   2.7 Overlay for Mobile Menu
+   ────────────────────────────────────────── */
+
+.skydesignsol-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+  }
+  
+  .skydesignsol-overlay.skydesignsol-active {
+      display: block;
+      opacity: 1;
+  }
+  
+  /* Show/Hide Desktop CTA */
+  .skydesignsol-desktop-cta {
+      display: inline-block;
+  }
+  
+  .skydesignsol-mobile-cta-wrapper {
+      display: none;
+  }
+  
+/* ──────────────────────────────────────────
+   2.8 Navigation Responsive Design
+   ────────────────────────────────────────── */
+
+@media (max-width: 991.98px) {
+      .skydesignsol-navbar {
+          padding: 16px 20px;
+      }
+  
+      .skydesignsol-mobile-menu-btn {
+          display: flex;
+      }
+  
+      .skydesignsol-desktop-cta {
+          display: none;
+      }
+  
+      .skydesignsol-mobile-cta-wrapper {
+          display: block;
+          width: 100%;
+      }
+  
+      .skydesignsol-nav-links {
+          position: fixed;
+          top: 0;
+          right: -220%;
+          left: auto;
+          transform: none;
+          width: 70%;
+          max-width: 300px;
+          height: 100vh!important;
+          background: #053333;
+          flex-direction: column;
+          padding: 80px 20px 20px;
+          gap: 0;
+          box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+          transition: right 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+          animation: none;
+      }
+  
+      .skydesignsol-nav-links.skydesignsol-active {
+          right: -50%;
+      }
+  
+      .skydesignsol-nav-item {
+          width: 100%;
+          opacity: 0;
+          transform: translateX(20px);
+      }
+  
+      .skydesignsol-nav-links.skydesignsol-active .skydesignsol-nav-item {
+          animation: skydesignsol-slide-in-right 0.4s ease forwards;
+      }
+  
+      .skydesignsol-nav-links.skydesignsol-active .skydesignsol-nav-item:nth-child(1) {
+          animation-delay: 0.1s;
+      }
+  
+      .skydesignsol-nav-links.skydesignsol-active .skydesignsol-nav-item:nth-child(2) {
+          animation-delay: 0.15s;
+      }
+  
+      .skydesignsol-nav-links.skydesignsol-active .skydesignsol-nav-item:nth-child(3) {
+          animation-delay: 0.2s;
+      }
+  
+      .skydesignsol-nav-links.skydesignsol-active .skydesignsol-nav-item:nth-child(4) {
+          animation-delay: 0.25s;
+      }
+  
+      .skydesignsol-nav-links.skydesignsol-active .skydesignsol-nav-item:nth-child(5) {
+          animation-delay: 0.3s;
+      }
+  
+      @keyframes skydesignsol-slide-in-right {
+          to {
+              opacity: 1;
+              transform: translateX(0);
+          }
+      }
+  
+      .skydesignsol-navbar .skydesignsol-logo,
+      .skydesignsol-logo {
+          height: 38px !important;
+          max-height: 38px !important;
+          width: auto !important;
+          overflow: hidden !important;
+      }
+
+      .skydesignsol-navbar .skydesignsol-logo-svg,
+      .skydesignsol-navbar .skydesignsol-logo-img,
+      .skydesignsol-logo-svg,
+      .skydesignsol-logo-img,
+      .skydesignsol-logo svg,
+      .skydesignsol-logo img,
+      .skydesignsol-logo svg[style],
+      .skydesignsol-logo-svg[style] {
+          height: 38px !important;
+          max-height: 38px !important;
+          width: auto !important;
+          max-width: 190px !important;
+          object-fit: contain !important;
+      }
+  }
+
+  /* Small Mobile Devices */
+  @media (max-width: 480px) {
+      .skydesignsol-navbar {
+          padding: 12px 16px;
+      }
+
+      .skydesignsol-navbar .skydesignsol-logo,
+      .skydesignsol-logo {
+          height: 34px !important;
+          max-height: 34px !important;
+          width: auto !important;
+          overflow: hidden !important;
+      }
+
+      .skydesignsol-navbar .skydesignsol-logo-svg,
+      .skydesignsol-navbar .skydesignsol-logo-img,
+      .skydesignsol-logo-svg,
+      .skydesignsol-logo-img,
+      .skydesignsol-logo svg,
+      .skydesignsol-logo img,
+      .skydesignsol-logo svg[style],
+      .skydesignsol-logo-svg[style] {
+          height: 34px !important;
+          max-height: 34px !important;
+          width: auto !important;
+          max-width: 170px !important;
+          object-fit: contain !important;
+      }
+
+      .skydesignsol-cta-button {
+          padding: 12px 24px;
+          font-size: 16px;
+      }
+  
+      .skydesignsol-nav-links {
+          width: 80%;
+      }
+  }
+
+  /* ============================================
+     MarkaWorks Logo Responsive Breakpoints - WordPress Compatible
+     ============================================ */
+
+  /* Large Desktop (1200px+) - Enhanced logo size */
+  @media (min-width: 1200px) {
+      .skydesignsol-navbar .skydesignsol-logo,
+      .skydesignsol-logo {
+          height: 48px !important;
+          max-height: 48px !important;
+          width: auto !important;
+          overflow: hidden !important;
+      }
+
+      .skydesignsol-navbar .skydesignsol-logo-svg,
+      .skydesignsol-navbar .skydesignsol-logo-img,
+      .skydesignsol-logo-svg,
+      .skydesignsol-logo-img,
+      .skydesignsol-logo svg,
+      .skydesignsol-logo img,
+      .skydesignsol-logo svg[style],
+      .skydesignsol-logo-svg[style] {
+          height: 48px !important;
+          max-height: 48px !important;
+          width: auto !important;
+          max-width: 240px !important;
+          object-fit: contain !important;
+      }
+  }
+
+  /* Desktop to Large Tablet (992px - 1199px) */
+  @media (max-width: 1199px) and (min-width: 992px) {
+      .skydesignsol-navbar .skydesignsol-logo,
+      .skydesignsol-logo {
+          height: 44px !important;
+          max-height: 44px !important;
+          width: auto !important;
+          overflow: hidden !important;
+      }
+
+      .skydesignsol-navbar .skydesignsol-logo-svg,
+      .skydesignsol-navbar .skydesignsol-logo-img,
+      .skydesignsol-logo-svg,
+      .skydesignsol-logo-img,
+      .skydesignsol-logo svg,
+      .skydesignsol-logo img,
+      .skydesignsol-logo svg[style],
+      .skydesignsol-logo-svg[style] {
+          height: 44px !important;
+          max-height: 44px !important;
+          width: auto !important;
+          max-width: 220px !important;
+          object-fit: contain !important;
+      }
+  }
+
+  /* Tablet (769px - 991px) */
+  @media (max-width: 991px) and (min-width: 769px) {
+      .skydesignsol-navbar .skydesignsol-logo,
+      .skydesignsol-logo {
+          height: 40px !important;
+          max-height: 40px !important;
+          width: auto !important;
+          overflow: hidden !important;
+      }
+
+      .skydesignsol-navbar .skydesignsol-logo-svg,
+      .skydesignsol-navbar .skydesignsol-logo-img,
+      .skydesignsol-logo-svg,
+      .skydesignsol-logo-img,
+      .skydesignsol-logo svg,
+      .skydesignsol-logo img,
+      .skydesignsol-logo svg[style],
+      .skydesignsol-logo-svg[style] {
+          height: 40px !important;
+          max-height: 40px !important;
+          width: auto !important;
+          max-width: 200px !important;
+          object-fit: contain !important;
+      }
+  }
+
+  /* Ultra Small Mobile (≤320px) */
+  @media (max-width: 320px) {
+      .skydesignsol-navbar .skydesignsol-logo,
+      .skydesignsol-logo {
+          height: 30px !important;
+          max-height: 30px !important;
+          width: auto !important;
+          overflow: hidden !important;
+      }
+
+      .skydesignsol-navbar .skydesignsol-logo-svg,
+      .skydesignsol-navbar .skydesignsol-logo-img,
+      .skydesignsol-logo-svg,
+      .skydesignsol-logo-img,
+      .skydesignsol-logo svg,
+      .skydesignsol-logo img,
+      .skydesignsol-logo svg[style],
+      .skydesignsol-logo-svg[style] {
+          height: 30px !important;
+          max-height: 30px !important;
+          width: auto !important;
+          max-width: 150px !important;
+          object-fit: contain !important;
+      }
+  }
+
+  /* ============================================
+     WordPress Override - Force Logo Responsive Behavior
+     ============================================ */
+  
+  /* Force responsive behavior for WordPress environments */
+  body .skydesignsol-navbar .skydesignsol-logo,
+  body .skydesignsol-logo,
+  .wp-site-blocks .skydesignsol-navbar .skydesignsol-logo,
+  .wp-site-blocks .skydesignsol-logo {
+      height: auto !important;
+      max-height: none !important;
+  }
+
+  body .skydesignsol-navbar .skydesignsol-logo-svg,
+  body .skydesignsol-navbar .skydesignsol-logo-img,
+  body .skydesignsol-logo-svg,
+  body .skydesignsol-logo-img,
+  body .skydesignsol-logo svg,
+  body .skydesignsol-logo img,
+  .wp-site-blocks .skydesignsol-navbar .skydesignsol-logo-svg,
+  .wp-site-blocks .skydesignsol-navbar .skydesignsol-logo-img,
+  .wp-site-blocks .skydesignsol-logo-svg,
+  .wp-site-blocks .skydesignsol-logo-img,
+  .wp-site-blocks .skydesignsol-logo svg,
+  .wp-site-blocks .skydesignsol-logo img {
+      height: 42px !important;
+      max-height: 42px !important;
+      width: auto !important;
+  }
+
+/* ============================================
+   3. HERO SECTION
+   ============================================ */
+
+/* ──────────────────────────────────────────
+   3.1 Hero Layout & Structure
+   ────────────────────────────────────────── */
+
+.hero-section {
+    min-height: calc(100vh - var(--nav-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #053333 0%, #074747 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 80px 40px;
+}
+
+.hero-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.1;
+    margin-bottom: 24px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-highlight {
+    color: var(--color-secondary);
+    display: block;
+    position: relative;
+}
+
+.hero-description {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: rgba(244, 245, 245, 0.9);
+    line-height: 1.8;
+    margin-bottom: 40px;
+    max-width: 600px;
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+.hero-cta-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+.hero-cta-primary,
+.hero-cta-secondary {
+    padding: 16px 40px;
+    border-radius: 100px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.hero-cta-primary {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+    box-shadow: 0 4px 15px rgba(184, 212, 50, 0.3);
+}
+
+.hero-cta-primary:hover {
+    background: var(--color-secondary);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(184, 212, 50, 0.5);
+}
+
+.hero-cta-secondary {
+    background: transparent;
+    color: var(--color-text);
+    border: 2px solid var(--color-text);
+}
+
+.hero-cta-secondary:hover {
+    background: var(--color-text);
+    color: var(--color-primary);
+    transform: translateY(-3px);
+}
+
+.hero-visual {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-gradient-orb {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(184, 212, 50, 0.3) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+    position: relative;
+}
+
+.hero-gradient-orb::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(184, 212, 50, 0.5) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite 0.5s;
+}
+
+/* ──────────────────────────────────────────
+   3.2 Hero Animations
+   ────────────────────────────────────────── */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* ============================================
+   4. FEATURES SECTION
+   ============================================ */
+
+/* ──────────────────────────────────────────
+   4.1 Features Layout & Grid
+   ────────────────────────────────────────── */
+
+.features-section {
+    padding: 120px 40px;
+    background: #F4F5F5;
+}
+
+.features-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 700;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.section-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: rgba(5, 51, 51, 0.7);
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.feature-card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    background: linear-gradient(135deg, #053333 0%, #074747 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secondary);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: rotate(5deg) scale(1.1);
+    background: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+.feature-description {
+    font-size: 1rem;
+    color: rgba(5, 51, 51, 0.8);
+    line-height: 1.6;
+}
+
+/* ============================================
+   5. CONTACT CTA SECTION
+   ============================================ */
+
+/* ──────────────────────────────────────────
+   5.1 CTA Layout & Styling
+   ────────────────────────────────────────── */
+
+.contact-cta-section {
+    padding: 100px 40px;
+    background: linear-gradient(135deg, #053333 0%, #074747 100%);
+    text-align: center;
+}
+
+.contact-cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-cta-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 20px;
+}
+
+.contact-cta-description {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: rgba(244, 245, 245, 0.9);
+    margin-bottom: 40px;
+}
+
+.contact-cta-button {
+    display: inline-block;
+    padding: 18px 48px;
+    background: var(--color-secondary);
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(184, 212, 50, 0.3);
+}
+
+.contact-cta-button:hover {
+    background: var(--color-secondary);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(184, 212, 50, 0.5);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - HERO & FEATURES
+   ============================================ */
+
+/* ──────────────────────────────────────────
+   Tablet Breakpoint (≤992px)
+   ────────────────────────────────────────── */
+
+@media (max-width: 992px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-cta-group {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        height: 400px;
+    }
+
+    .hero-gradient-orb {
+        width: 300px;
+        height: 300px;
+    }
+
+    .hero-gradient-orb::before {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 20px;
+        min-height: auto;
+    }
+
+    .features-section {
+        padding: 80px 20px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-cta-section {
+        padding: 80px 20px;
+    }
+
+    .hero-cta-primary,
+    .hero-cta-secondary {
+        padding: 14px 32px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 40px 16px;
+    }
+
+    .features-section {
+        padding: 60px 16px;
+    }
+
+    .contact-cta-section {
+        padding: 60px 16px;
+    }
+
+    .feature-card {
+        padding: 30px 20px;
+    }
+
+    .hero-visual {
+        height: 300px;
+    }
+
+    .hero-gradient-orb {
+        width: 250px;
+        height: 250px;
+    }
+
+    .hero-gradient-orb::before {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* ============================================
+   6. FOOTER SECTION
+   ============================================ */
+
+/* ──────────────────────────────────────────
+   6.1 Footer Structure & Layout
+   ────────────────────────────────────────── */
+
+.skydesignsol-footer {
+    background: #053333;
+    padding: 80px 40px 40px;
+    position: relative;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+/* Footer Section 1: Logo + Description + Social */
+.footer-section-1 {
+    padding-right: 20px;
+}
+
+.footer-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(244, 245, 245, 0.8);
+}
+
+.skydesignsol-footer-logo-img {
+    max-width: 180px;
+    height: auto;
+}
+
+.skydesignsol-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(184, 212, 50, 0.1);
+    border-radius: 50%;
+    color: #B8D432;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.skydesignsol-social-link:hover {
+    background: #B8D432;
+    color: #053333;
+    transform: translateY(-3px);
+}
+
+/* Footer Sections 2 & 3: Menu Links */
+.footer-title {
+    color: #F4F5F5;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: #B8D432;
+}
+
+.footer-menu {
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu-link {
+    color: rgba(244, 245, 245, 0.8);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-menu-link:hover {
+    color: #B8D432;
+    padding-left: 8px;
+}
+
+.footer-menu-link i {
+    font-size: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.footer-menu-link:hover i {
+    transform: translateX(3px);
+}
+
+/* Footer Section 4: Support/Contact */
+.footer-contact {
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact strong {
+    color: #F4F5F5;
+    font-size: 0.9rem;
+}
+
+.footer-contact-link {
+    color: rgba(244, 245, 245, 0.8);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.footer-contact-link:hover {
+    color: #B8D432;
+}
+
+.footer-contact i {
+    font-size: 1.25rem;
+}
+
+/* Copyright Section */
+.skydesignsol-copyright {
+    color: rgba(244, 245, 245, 0.8);
+    font-size: 0.95rem;
+}
+
+.skydesignsol-copyright strong {
+    color: #B8D432;
+}
+
+.skydesignsol-footer-divider {
+    border-color: rgba(244, 245, 245, 0.2);
+    opacity: 1;
+}
+
+/* Back to Top Button */
+.skydesignsol-back-to-top {
+    width: 40px;
+    height: 40px;
+    border-color: #B8D432;
+    color: #B8D432;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.skydesignsol-back-to-top:hover {
+    background: #B8D432;
+    border-color: #B8D432;
+    color: #053333;
+    transform: translateY(-3px);
+}
+
+.skydesignsol-footer-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* Contact Row - Full Width at Top */
+.skydesignsol-contact-row {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+/* Two-Column Main Grid - Calendly Left, Locations Right */
+.skydesignsol-footer-main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: stretch;
+}
+
+.skydesignsol-footer-calendly-column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.skydesignsol-footer-locations-column {
+    display: flex;
+    flex-direction: column;
+}
+/* Footer Blogs Section */
+.skydesignsol-footer-blogs {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.skydesignsol-footer-section-title {
+    color: #F4F5F5;
+    font-size: 40px;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 600;
+    line-height: 48px;
+    margin: 0 0 40px 0;
+    text-align: left;
+}
+
+.skydesignsol-footer-blogs-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 350px;
+    row-gap: 16px;
+    align-items: flex-start;
+}
+
+.skydesignsol-footer-blog-column:first-child {
+    grid-column: 1 / 3;
+}
+
+.skydesignsol-footer-blog-column:last-child {
+    grid-column: 3 / 5;
+}
+
+.skydesignsol-footer-blogs-loading {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.skydesignsol-footer-blog-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skydesignsol-footer-blog-link {
+    color: #F4F5F5;
+    font-size: 24px;
+    font-family: 'ABeeZee', sans-serif;
+    font-weight: 400;
+    line-height: 33.6px;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.skydesignsol-footer-blog-link:hover {
+    color: #B8D432;
+    text-decoration: underline;
+}
+
+/* Footer Bottom */
+.skydesignsol-footer-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.skydesignsol-footer-divider {
+    height: 1px;
+    background: rgba(244, 245, 245, 0.4);
+    width: 100%;
+}
+
+.skydesignsol-footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.skydesignsol-footer-brand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+    flex: 1;
+}
+
+.skydesignsol-footer-logo {
+    height: 40px;
+}
+
+.skydesignsol-footer-logo-img {
+    height: 100%;
+    width: auto;
+}
+
+.skydesignsol-footer-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex: 1;
+}
+
+.skydesignsol-footer-link {
+    color: #F4F5F5;
+    font-size: 16px;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    text-decoration: none;
+    padding: 8px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+}
+
+.skydesignsol-footer-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    right: 8px;
+    height: 2px;
+    background: #B8D432;
+    transform: scaleX(0);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skydesignsol-footer-link:hover {
+    color: #B8D432;
+}
+
+.skydesignsol-footer-link:hover::after {
+    transform: scaleX(1);
+}
+
+.skydesignsol-footer-social {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.skydesignsol-footer-cta {
+    width: 48px;
+    height: 48px;
+    background: #B8D432;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    text-decoration: none;
+    padding: 8px;
+}
+
+.skydesignsol-cta-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skydesignsol-footer-cta:hover .skydesignsol-cta-icon {
+    animation: pulse 1s ease-in-out infinite;
+}
+
+.skydesignsol-footer-legal {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.skydesignsol-copyright {
+    color: #F4F5F5;
+    font-size: 16px;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.skydesignsol-legal-links {
+    display: flex;
+    gap: 24px;
+}
+
+.skydesignsol-legal-link {
+    color: #F4F5F5;
+    font-size: 16px;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    text-decoration: underline;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skydesignsol-legal-link:hover {
+    color: #94CDD9;
+    text-decoration-color: #94CDD9;
+}
+
+/* ──────────────────────────────────────────
+   6.2 Footer Responsive Design
+   ────────────────────────────────────────── */
+
+/* Large Desktop (1200px+) */
+@media (min-width: 1200px) {
+    .skydesignsol-footer {
+        padding: 100px 60px 30px 60px;
+    }
+
+    .footer-section-1 {
+        padding-right: 30px;
+    }
+
+    .skydesignsol-footer-logo-img {
+        max-width: 200px;
+    }
+}
+
+/* Tablet (769px - 1024px) */
+@media (max-width: 1024px) {
+    .skydesignsol-footer {
+        padding: 60px 32px 32px;
+    }
+
+    .footer-section-1,
+    .footer-section-2,
+    .footer-section-3,
+    .footer-section-4 {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .footer-title {
+        font-size: 1.15rem;
+    }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+    .skydesignsol-footer {
+        padding: 40px 20px 20px;
+    }
+
+    .footer-section-1,
+    .footer-section-2,
+    .footer-section-3,
+    .footer-section-4 {
+        margin-bottom: 40px;
+    }
+
+    .skydesignsol-footer-logo-img {
+        max-width: 150px;
+    }
+
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+    .skydesignsol-footer {
+        padding: 32px 16px 16px;
+    }
+
+    .footer-title {
+        font-size: 1.1rem;
+    }
+
+    .footer-menu-link,
+    .footer-contact-link,
+    .footer-description {
+        font-size: 0.9rem;
+    }
+
+    .skydesignsol-social-link {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+    
+    .skydesignsol-contact-title {
+        font-size: 84px;
+    }
+    
+    .skydesignsol-contact-phone,
+    .skydesignsol-contact-email {
+        font-size: 48px;
+    }
+    
+    .skydesignsol-calendly-background {
+        min-height: 1000px;
+        height: 1000px;
+    }
+    
+    .skydesignsol-calendly-container {
+        max-width: 1100px;
+        height: 1000px;
+        min-height: 1000px;
+    }
+    
+    .calendly-inline-widget {
+        height: 1000px !important;
+        min-height: 1000px !important;
+        max-height: 1000px !important;
+    }
+    
+   
+}
+
+/* Tablet (769px - 1024px) */
+@media (max-width: 1024px) {
+    .skydesignsol-footer {
+        padding: 60px 32px 32px;
+    }
+    
+    .skydesignsol-footer-container {
+        gap: 60px;
+    }
+    
+    .skydesignsol-footer-main-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    .skydesignsol-contact-title {
+        font-size: 56px;
+    }
+    
+    .skydesignsol-contact-phone,
+    .skydesignsol-contact-email {
+        font-size: 32px;
+    }
+    
+    .skydesignsol-calendly-background {
+        min-height: 700px;
+        height: 700px;
+    }
+    
+    .skydesignsol-calendly-container {
+        height: 700px;
+        min-height: 700px;
+    }
+    
+    .calendly-inline-widget {
+        height: 700px !important;
+        min-height: 700px !important;
+        max-height: 700px !important;
+    }
+    
+ 
+    
+    .skydesignsol-footer-locations {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 16px;
+        row-gap: 16px;
+    }
+    
+    .skydesignsol-footer-blogs-columns {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 16px;
+    }
+    
+    .skydesignsol-footer-blog-column:first-child,
+    .skydesignsol-footer-blog-column:last-child {
+        grid-column: span 1;
+    }
+    
+    .skydesignsol-footer-section-title {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 24px;
+    }
+    
+    .skydesignsol-footer-blog-link {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    
+    .skydesignsol-location-title {
+        font-size: 32px;
+    }
+    
+    .skydesignsol-location-icon {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .skydesignsol-footer-main {
+        flex-direction: row;
+        gap: 24px;
+        align-items: center;
+    }
+    
+    .skydesignsol-footer-brand {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        justify-content: flex-start;
+    }
+    
+    .skydesignsol-footer-nav {
+        gap: 18px;
+        justify-content: center;
+        flex: 1;
+    }
+    
+    .skydesignsol-footer-social {
+        gap: 18px;
+        justify-content: flex-end;
+    }
+    
+    .skydesignsol-social-group {
+        gap: 16px;
+    }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+    .skydesignsol-footer {
+        padding: 40px 20px 20px;
+    }
+    
+    .skydesignsol-footer-container {
+        gap: 40px;
+    }
+    
+    .skydesignsol-footer-main-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .skydesignsol-contact-row {
+        flex-direction: column;
+        gap: 32px;
+    }
+    
+    .skydesignsol-contact-title {
+        font-size: 36px;
+    }
+    
+    .skydesignsol-contact-phone,
+    .skydesignsol-contact-email {
+        font-size: 24px;
+    }
+    
+    .skydesignsol-calendly-background {
+        min-height: 700px;
+        height: 700px;
+    }
+    
+    .skydesignsol-calendly-container {
+        height: 700px;
+        min-height: 700px;
+    }
+    
+    .calendly-inline-widget {
+        min-width: 280px !important;
+        height: 700px !important;
+        min-height: 700px !important;
+        max-height: 700px !important;
+    }
+    
+    .skydesignsol-footer-locations {
+        grid-template-columns: 1fr;
+        column-gap: 12px;
+        row-gap: 12px;
+    }
+    
+    .skydesignsol-footer-blogs-columns {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 16px;
+    }
+    
+    .skydesignsol-footer-blog-column:first-child,
+    .skydesignsol-footer-blog-column:last-child {
+        grid-column: 1 / -1;
+    }
+    
+    .skydesignsol-footer-section-title {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 28px;
+    }
+    
+    .skydesignsol-footer-blog-link {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    
+    .skydesignsol-location-card {
+        padding: 20px;
+    }
+    
+    .skydesignsol-location-title {
+        font-size: 28px;
+    }
+    
+    .skydesignsol-location-icon {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .skydesignsol-location-address {
+        font-size: 14px;
+    }
+    
+    .skydesignsol-footer-main {
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+    }
+    
+    .skydesignsol-footer-brand {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .skydesignsol-footer-nav {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .skydesignsol-footer-social {
+        gap: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .skydesignsol-social-group {
+        gap: 20px;
+    }
+    
+    .skydesignsol-footer-legal {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+    
+    .skydesignsol-legal-links {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+    .skydesignsol-footer {
+        padding: 32px 16px 16px;
+    }
+    
+    .skydesignsol-contact-title {
+        font-size: 28px;
+    }
+    
+    .skydesignsol-contact-phone,
+    .skydesignsol-contact-email {
+        font-size: 20px;
+    }
+    
+    .skydesignsol-calendly-background {
+        padding: 24px 16px;
+        min-height: 400px;
+    }
+    
+    .skydesignsol-calendly-container {
+        height: 350px;
+    }
+    
+   
+    
+    .skydesignsol-location-card {
+        padding: 16px;
+    }
+    
+    .skydesignsol-location-title {
+        font-size: 24px;
+    }
+    
+    .skydesignsol-location-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .skydesignsol-footer-nav {
+        gap: 16px;
+        justify-content: center;
+    }
+    
+    .skydesignsol-footer-link {
+        font-size: 14px;
+        padding: 8px;
+    }
+    
+    .skydesignsol-social-link,
+    .skydesignsol-footer-cta {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .skydesignsol-social-icon {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .skydesignsol-cta-icon {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .skydesignsol-footer-main {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+    
+    .skydesignsol-footer-brand {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        justify-content: center;
+    }
+    
+    .skydesignsol-footer-social {
+        justify-content: center;
+        gap: 16px;
+    }
+    
+    .skydesignsol-social-group {
+        gap: 16px;
+    }
+    
+    .skydesignsol-copyright,
+    .skydesignsol-legal-link {
+        font-size: 14px;
+    }
+}
+
+/* Ultra Small (≤320px) */
+@media (max-width: 320px) {
+    .skydesignsol-footer {
+        padding: 24px 12px 12px;
+    }
+    
+    .skydesignsol-contact-title {
+        font-size: 24px;
+    }
+    
+    .skydesignsol-contact-phone,
+    .skydesignsol-contact-email {
+        font-size: 18px;
+    }
+    
+    .skydesignsol-calendly-background {
+        padding: 20px 12px;
+        min-height: 350px;
+    }
+    
+    .skydesignsol-calendly-container {
+        height: 300px;
+    }
+    
+   
+    
+    .skydesignsol-location-title {
+        font-size: 20px;
+    }
+    
+    .skydesignsol-location-address {
+        font-size: 12px;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .skydesignsol-footer *,
+    .skydesignsol-footer *::before,
+    .skydesignsol-footer *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .skydesignsol-footer {
+        background: #000000;
+    }
+    
+    .skydesignsol-contact-title,
+    .skydesignsol-location-title,
+    .skydesignsol-location-address,
+    .skydesignsol-footer-link,
+    .skydesignsol-copyright {
+        color: #FFFFFF;
+    }
+    
+    .skydesignsol-contact-phone {
+        color: #FFFF00;
+    }
+    
+    .skydesignsol-contact-email {
+        color: #00FFFF;
+    }
+    
+    .skydesignsol-location-card {
+      background: #333333;
+      border: 2px solid #FFFFFF;
+    }
+}
+/* ============================================
+   7. STICKY CTA BAR
+   ============================================ */
+
+/* ──────────────────────────────────────────
+   7.1 Sticky Bar Structure
+   For homepage, about, projects, services, contact, blogs pages
+   ────────────────────────────────────────── */
+
+.main-page-cta-bar {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    animation: slideUpMainCTA 0.6s ease-out;
+}
+
+/* ──────────────────────────────────────────
+   7.2 Sticky Bar Animations
+   ────────────────────────────────────────── */
+
+@keyframes slideUpMainCTA {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.main-page-cta-container{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(5, 51, 51, 0.75);
+    padding: 14px 20px;
+    border-radius: 60px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3), 
+                0 0 1px rgba(255, 255, 255, 0.2) inset,
+                0 4px 16px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    transition: all 0.3s ease;
+    justify-content: space-between;
+}
+
+.main-page-cta-container:hover {
+    background: rgba(5, 51, 51, 0.85);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4), 
+                0 0 1px rgba(255, 255, 255, 0.25) inset,
+                0 8px 24px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Logo */
+.main-page-cta-logo {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #053333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.main-page-cta-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Let's Talk Text (Desktop Only) */
+.main-page-cta-text {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #F4F5F5;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+    min-width: 100px;
+    display: block;
+}
+
+/* Hide on mobile */
+@media (max-width: 768px) {
+    .main-page-cta-text {
+        display: none;
+    }
+}
+
+/* Button with WhatsApp Icon */
+.main-page-cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #B8D432;
+    color: #053333;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border-radius: 50%;
+    font-family: 'Inter Tight', sans-serif;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(184, 212, 50, 0.3);
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+    flex-shrink: 0;
+    --border-angle: 0turn;
+    order: 2;
+    margin-left: auto;
+}
+
+/* White snake looping animation around button */
+.main-page-cta-button::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    padding: 3px;
+    background: conic-gradient(
+        from var(--border-angle),
+        #F4F5F5 0%,
+        transparent 30%,
+        transparent 70%,
+        #F4F5F5 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    animation: mw-border-spin 3s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.main-page-cta-button:hover {
+    background: #C5E138;
+    box-shadow: 0 6px 16px rgba(184, 212, 50, 0.4);
+    transform: translateY(-1px);
+}
+
+.main-page-cta-button:hover::after {
+    animation-duration: 2s;
+}
+
+.main-page-cta-whatsapp-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.main-page-cta-button:hover .main-page-cta-whatsapp-icon {
+    transform: scale(1.15) rotate(5deg);
+}
+
+/* Project Managers (Agents) - Hidden */
+.main-page-cta-agents {
+    display: none;
+}
+
+.main-page-cta-agent {
+    display: none;
+}
+
+.main-page-cta-agent-2 {
+    display: none;
+}
+
+.main-page-cta-agent:hover {
+    display: none;
+}
+
+.main-page-cta-agent-img {
+    display: none;
+}
+
+/* ──────────────────────────────────────────
+   7.3 Sticky Bar Responsive Design
+   ────────────────────────────────────────── */
+
+/* Tablet and Mobile devices (≤768px) */
+@media (max-width: 768px) {
+    .main-page-cta-bar {
+        bottom: max(20px, env(safe-area-inset-bottom, 20px));
+        right: 20px;
+        left: auto;
+        width: auto;
+    }
+    
+    .main-page-cta-container {
+        padding: 12px;
+        gap: 0;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(5, 51, 51, 0.9);
+        backdrop-filter: blur(30px) saturate(180%);
+        -webkit-backdrop-filter: blur(30px) saturate(180%);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 
+                    0 0 1px rgba(255, 255, 255, 0.2) inset;
+    }
+    
+    /* Hide logo and agents on mobile */
+    .main-page-cta-logo,
+    .main-page-cta-agents {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+    
+    .main-page-cta-button {
+        width: 52px !important;
+        height: 52px !important;
+        padding: 0 !important;
+        border-radius: 50% !important;
+        background: #B8D432;
+        color: #053333;
+        flex-shrink: 0;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .main-page-cta-whatsapp-icon {
+        width: 26px !important;
+        height: 26px !important;
+    }
+}
+
+/* ============================================
+   8. UTILITY CLASSES & ACCESSIBILITY
+   ============================================ */
+
+/* ──────────────────────────────────────────
+   8.1 Accessibility Features
+   ────────────────────────────────────────── */
+
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+    outline: 3px solid var(--color-secondary);
+    outline-offset: 2px;
+}
+
+/* Skip to main content link (for screen readers) */
+.skip-to-main {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.skip-to-main:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1em;
+}
+
+/* Screen reader only content */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --color-primary: #000000;
+        --color-secondary: #FFFF00;
+        --color-text: #FFFFFF;
+    }
+}
+
+/* ──────────────────────────────────────────
+   8.2 Utility Classes
+   ────────────────────────────────────────── */
+
+/* Text Alignment */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Display Utilities */
+.d-none { display: none !important; }
+.d-block { display: block !important; }
+.d-flex { display: flex !important; }
+.d-grid { display: grid !important; }
+
+/* Spacing Utilities */
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+.p-1 { padding: 0.5rem; }
+.p-2 { padding: 1rem; }
+.p-3 { padding: 1.5rem; }
+.p-4 { padding: 2rem; }
+
+/* ──────────────────────────────────────────
+   8.3 Print Styles
+   ────────────────────────────────────────── */
+
+@media print {
+    /* Hide non-essential elements when printing */
+    .skydesignsol-navbar,
+    .skydesignsol-overlay,
+    .main-page-cta-bar,
+    .hero-visual,
+    .skydesignsol-footer-social,
+    .contact-cta-section {
+        display: none !important;
+    }
+
+    /* Reset body padding for print */
+    body {
+        padding-top: 0;
+        background: white;
+        color: black;
+    }
+
+    /* Ensure links are visible */
+    a {
+        text-decoration: underline;
+        color: #000;
+    }
+
+    /* Page breaks */
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+
+    /* Print-friendly colors */
+    .hero-section,
+    .features-section,
+    .skydesignsol-footer {
+        background: white !important;
+        color: black !important;
+    }
+}
+
+/*
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                            END OF STYLESHEET
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Sky Design Solutions © 2025
+For support, please contact: support@skydesignsol.com
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+*/

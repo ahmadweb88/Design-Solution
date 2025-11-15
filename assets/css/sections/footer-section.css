@@ -1,0 +1,1116 @@
+/* ============================================================
+   FOOTER SECTION - Modular CSS
+   ============================================================ */
+
+/* Footer Styles */
+.skydesignsol-footer {
+  background: #053333;
+  padding: 80px 40px 40px;
+  position: relative;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.skydesignsol-footer-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Contact Row - Full Width at Top */
+.skydesignsol-contact-row {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* Two-Column Main Grid - Calendly Left, Locations Right */
+.skydesignsol-footer-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: stretch;
+}
+
+.skydesignsol-footer-calendly-column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.skydesignsol-footer-locations-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.skydesignsol-contact-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.skydesignsol-contact-title {
+  color: #F4F5F5;
+  font-size: 72px;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 0;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  cursor: default;
+}
+
+.skydesignsol-contact-title:hover {
+  color: #B8D432;
+  text-shadow: 0 0 30px rgba(184, 212, 50, 0.3);
+}
+
+.skydesignsol-contact-phone {
+  color: #BFB1D7;
+  font-size: 40px;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: inline-block;
+  position: relative;
+  padding: 8px 0;
+  overflow: hidden;
+  width: fit-content;
+  max-width: 100%;
+}
+
+/* Simple underline for phone */
+.skydesignsol-contact-phone::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #B8D432;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skydesignsol-contact-phone::before {
+  display: none;
+}
+
+.skydesignsol-contact-phone:hover {
+  color: #F4F5F5;
+  transform: translateY(-4px) scale(1.02);
+  text-shadow: 0 8px 25px rgba(191, 177, 215, 0.4);
+}
+
+.skydesignsol-contact-phone:hover::after,
+.skydesignsol-contact-phone:focus::after {
+  transform: scaleX(1);
+}
+
+.skydesignsol-contact-email {
+  color: #94CDD9;
+  font-size: 40px;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: inline-block;
+  word-break: break-all;
+  position: relative;
+  padding: 8px 0;
+  overflow: hidden;
+  width: fit-content;
+  max-width: 100%;
+}
+
+/* Simple underline for email */
+.skydesignsol-contact-email::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #B8D432;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skydesignsol-contact-email::before {
+  display: none;
+}
+
+.skydesignsol-contact-email:hover {
+  color: #F4F5F5;
+  transform: translateY(-4px) scale(1.02);
+  text-shadow: 0 8px 25px rgba(148, 205, 217, 0.4);
+}
+
+.skydesignsol-contact-email:hover::after,
+.skydesignsol-contact-email:focus::after {
+  transform: scaleX(1);
+}
+
+/* Calendly Section */
+.skydesignsol-calendly-section {
+  padding: 0;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.skydesignsol-calendly-background {
+  background: #B8D432;
+  border-radius: 16px;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-height: 1000px;
+  height: 1000px;
+}
+
+.skydesignsol-calendly-pattern {
+display: none;
+}
+
+.skydesignsol-pattern-element {
+  display: none;
+}
+
+.skydesignsol-calendly-container {
+  width: 100%;
+  max-width: 100%;
+  min-height: 1000px;
+  height: 1000px;
+  background: #B8D432;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  border: none;
+  box-shadow: none;
+  transition: none;
+  transform: none;
+  contain: layout size;
+  display: grid;
+  place-items: center;
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+}
+
+.skydesignsol-calendly-container::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.skydesignsol-calendly-container:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.calendly-inline-widget {
+  width: 100% !important;
+  min-width: 100% !important;
+  min-height: 1000px !important;
+  height: 1000px !important;
+  max-height: 1000px !important;
+  border-radius: 16px;
+  overflow: hidden !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.calendly-inline-widget iframe {
+  max-width: 100% !important;
+  border-radius: 16px;
+}
+
+/* Hide iframe scrollbar completely */
+.calendly-inline-widget iframe {
+  overflow: hidden !important;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.calendly-inline-widget iframe::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+}
+
+/* Override grey sections to green with maximum specificity */
+.calendly-inline-widget,
+.calendly-inline-widget *,
+.calendly-inline-widget iframe,
+.calendly-inline-widget iframe * {
+  --colorBackgroundSecondary: #B8D432 !important;
+  --coreColorNeutral100: #B8D432 !important;
+  --colorNeutral100: #B8D432 !important;
+  --colorNeutral200: #B8D432 !important;
+}
+
+/* Hide all scrollbars completely */
+.calendly-inline-widget *::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.calendly-inline-widget * {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+/* Target all possible grey background selectors */
+.calendly-inline-widget .lmtWIHO_gkbTeeyuvoJC.mOUYF5ZmuNL6I7t0mSFg,
+.lmtWIHO_gkbTeeyuvoJC.mOUYF5ZmuNL6I7t0mSFg,
+html .lmtWIHO_gkbTeeyuvoJC.mOUYF5ZmuNL6I7t0mSFg,
+body .lmtWIHO_gkbTeeyuvoJC.mOUYF5ZmuNL6I7t0mSFg,
+.calendly-inline-widget [style*="background-color: rgb(230, 230, 230)"],
+.calendly-inline-widget [style*="background-color:#e6e6e6"],
+.calendly-inline-widget [style*="background: rgb(230, 230, 230)"],
+.calendly-inline-widget [style*="background:#e6e6e6"] {
+  background-color: #B8D432 !important;
+  background: #B8D432 !important;
+}
+
+/* Office Locations */
+.skydesignsol-footer-locations {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.skydesignsol-location-card {
+  background: #0B4444;
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+  will-change: transform, box-shadow, border-color;
+}
+
+.skydesignsol-location-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(184, 212, 50, 0.15) 0%, rgba(148, 205, 217, 0.15) 50%, rgba(191, 177, 215, 0.15) 100%);
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1;
+}
+
+.skydesignsol-location-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(184, 212, 50, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1;
+}
+
+.skydesignsol-location-card:hover::before {
+  opacity: 1;
+}
+
+.skydesignsol-location-card:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.skydesignsol-location-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(184, 212, 50, 0.2);
+  border-color: rgba(184, 212, 50, 0.3);
+}
+
+.skydesignsol-location-card:active {
+  transform: translateY(-8px) scale(1.01);
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skydesignsol-location-icon {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  z-index: 2;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.skydesignsol-location-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  filter: brightness(0.9) saturate(1.1);
+}
+
+.skydesignsol-location-card:hover .skydesignsol-location-icon {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.skydesignsol-location-card:hover .skydesignsol-location-image {
+  transform: scale(1.1);
+  filter: brightness(1) saturate(1.2);
+}
+
+.skydesignsol-location-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.skydesignsol-location-title {
+  color: #F4F5F5;
+  font-size: 40px;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 8px 0;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skydesignsol-location-card:hover .skydesignsol-location-title {
+  color: #B8D432;
+}
+
+.skydesignsol-location-subtitle {
+  color: #F4F5F5;
+  font-size: 14px;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0 0 12px 0;
+  opacity: 0.8;
+}
+
+.skydesignsol-location-city-highlight {
+  color: #B8D432;
+  font-weight: 600;
+}
+
+.skydesignsol-location-address {
+  color: #F4F5F5;
+  font-size: 16px;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+  opacity: 0.9;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skydesignsol-location-card:hover .skydesignsol-location-address {
+  opacity: 1;
+}
+
+/* Footer Blogs Section */
+.skydesignsol-footer-blogs {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.skydesignsol-footer-section-title {
+  color: #F4F5F5;
+  font-size: 40px;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  line-height: 48px;
+  margin: 0 0 40px 0;
+  text-align: left;
+}
+
+.skydesignsol-footer-blogs-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 350px;
+  row-gap: 16px;
+  align-items: flex-start;
+}
+
+.skydesignsol-footer-blog-column:first-child {
+  grid-column: 1 / 3;
+}
+
+.skydesignsol-footer-blog-column:last-child {
+  grid-column: 3 / 5;
+}
+
+.skydesignsol-footer-blogs-loading {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.skydesignsol-footer-blog-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skydesignsol-footer-blog-link {
+  color: #F4F5F5;
+  font-size: 24px;
+  font-family: 'ABeeZee', sans-serif;
+  font-weight: 400;
+  line-height: 33.6px;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.skydesignsol-footer-blog-link:hover {
+  color: #B8D432;
+  text-decoration: underline;
+}
+
+/* Footer Bottom */
+.skydesignsol-footer-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.skydesignsol-footer-divider {
+  height: 1px;
+  background: rgba(244, 245, 245, 0.4);
+  width: 100%;
+}
+
+.skydesignsol-footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.skydesignsol-footer-brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  flex: 1;
+}
+
+.skydesignsol-footer-logo {
+  height: 40px;
+}
+
+.skydesignsol-footer-logo-img {
+  height: 100%;
+  width: auto;
+}
+
+.skydesignsol-footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex: 1;
+}
+
+.skydesignsol-footer-link {
+  color: #F4F5F5;
+  font-size: 16px;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  text-decoration: none;
+  padding: 8px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+}
+
+.skydesignsol-footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  right: 8px;
+  height: 2px;
+  background: #B8D432;
+  transform: scaleX(0);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skydesignsol-footer-link:hover {
+  color: #B8D432;
+}
+
+.skydesignsol-footer-link:hover::after {
+  transform: scaleX(1);
+}
+
+.skydesignsol-footer-social {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.skydesignsol-social-group {
+  display: flex;
+  gap: 16px;
+}
+
+.skydesignsol-social-link {
+  width: 48px;
+  height: 48px;
+  background: #F4F5F5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-decoration: none;
+  padding: 8px;
+}
+
+.skydesignsol-social-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skydesignsol-social-link:hover .skydesignsol-social-icon {
+  animation: pulse 1s ease-in-out infinite;
+  transform: scale(1.1);
+}
+
+.skydesignsol-social-link:hover .skydesignsol-social-icon path {
+  fill: #B8D432;
+}
+
+.skydesignsol-footer-cta {
+  width: 48px;
+  height: 48px;
+  background: #B8D432;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-decoration: none;
+  padding: 8px;
+}
+
+.skydesignsol-cta-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skydesignsol-footer-cta:hover .skydesignsol-cta-icon {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.skydesignsol-footer-legal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.skydesignsol-copyright {
+  color: #F4F5F5;
+  font-size: 16px;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.skydesignsol-legal-links {
+  display: flex;
+  gap: 24px;
+}
+
+.skydesignsol-legal-link {
+  color: #F4F5F5;
+  font-size: 16px;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  text-decoration: underline;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skydesignsol-legal-link:hover {
+  color: #94CDD9;
+  text-decoration-color: #94CDD9;
+}
+
+/* ===================================
+   FOOTER RESPONSIVE DESIGN
+   =================================== */
+
+/* Large Desktop (1200px+) */
+@media (min-width: 1200px) {
+  .skydesignsol-footer {
+      padding: 100px 60px 60px;
+  }
+
+  .skydesignsol-contact-title {
+      font-size: 84px;
+  }
+
+  .skydesignsol-contact-phone,
+  .skydesignsol-contact-email {
+      font-size: 48px;
+  }
+
+  .skydesignsol-calendly-background {
+      min-height: 1000px;
+      height: 1000px;
+  }
+
+  .skydesignsol-calendly-container {
+      max-width: 1100px;
+      height: 1000px;
+      min-height: 1000px;
+  }
+
+  .calendly-inline-widget {
+      height: 1000px !important;
+      min-height: 1000px !important;
+      max-height: 1000px !important;
+  }
+}
+
+/* Tablet (769px - 1024px) */
+@media (max-width: 1024px) {
+  .skydesignsol-footer {
+      padding: 60px 32px 32px;
+  }
+
+  .skydesignsol-footer-container {
+      gap: 60px;
+  }
+
+  .skydesignsol-footer-main-grid {
+      grid-template-columns: 1fr;
+      gap: 60px;
+  }
+
+  .skydesignsol-contact-title {
+      font-size: 56px;
+  }
+
+  .skydesignsol-contact-phone,
+  .skydesignsol-contact-email {
+      font-size: 32px;
+  }
+
+  .skydesignsol-calendly-background {
+      min-height: 700px;
+      height: 700px;
+  }
+
+  .skydesignsol-calendly-container {
+      height: 700px;
+      min-height: 700px;
+  }
+
+  .calendly-inline-widget {
+      height: 700px !important;
+      min-height: 700px !important;
+      max-height: 700px !important;
+  }
+
+  .skydesignsol-footer-locations {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 16px;
+      row-gap: 16px;
+  }
+
+  .skydesignsol-footer-blogs-columns {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+      row-gap: 16px;
+  }
+
+  .skydesignsol-footer-blog-column:first-child,
+  .skydesignsol-footer-blog-column:last-child {
+      grid-column: span 1;
+  }
+
+  .skydesignsol-footer-section-title {
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 24px;
+  }
+
+  .skydesignsol-footer-blog-link {
+      font-size: 20px;
+      line-height: 28px;
+  }
+
+  .skydesignsol-location-title {
+      font-size: 32px;
+  }
+
+  .skydesignsol-location-icon {
+      width: 120px;
+      height: 120px;
+  }
+
+  .skydesignsol-footer-main {
+      flex-direction: row;
+      gap: 24px;
+      align-items: center;
+  }
+
+  .skydesignsol-footer-brand {
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      justify-content: flex-start;
+  }
+
+  .skydesignsol-footer-nav {
+      gap: 18px;
+      justify-content: center;
+      flex: 1;
+  }
+
+  .skydesignsol-footer-social {
+      gap: 18px;
+      justify-content: flex-end;
+  }
+
+  .skydesignsol-social-group {
+      gap: 16px;
+  }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+  .skydesignsol-footer {
+      padding: 40px 20px 20px;
+  }
+
+  .skydesignsol-footer-container {
+      gap: 40px;
+  }
+
+  .skydesignsol-footer-main-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+  }
+
+  .skydesignsol-contact-row {
+      flex-direction: column;
+      gap: 32px;
+  }
+
+  .skydesignsol-contact-title {
+      font-size: 36px;
+  }
+
+  .skydesignsol-contact-phone,
+  .skydesignsol-contact-email {
+      font-size: 24px;
+  }
+
+  .skydesignsol-calendly-background {
+      min-height: 700px;
+      height: 700px;
+  }
+
+  .skydesignsol-calendly-container {
+      height: 700px;
+      min-height: 700px;
+  }
+
+  .calendly-inline-widget {
+      min-width: 280px !important;
+      height: 700px !important;
+      min-height: 700px !important;
+      max-height: 700px !important;
+  }
+
+  .skydesignsol-footer-locations {
+      grid-template-columns: 1fr;
+      column-gap: 12px;
+      row-gap: 12px;
+  }
+
+  .skydesignsol-footer-blogs-columns {
+      grid-template-columns: 1fr;
+      column-gap: 0;
+      row-gap: 16px;
+  }
+
+  .skydesignsol-footer-blog-column:first-child,
+  .skydesignsol-footer-blog-column:last-child {
+      grid-column: 1 / -1;
+  }
+
+  .skydesignsol-footer-section-title {
+      font-size: 28px;
+      line-height: 36px;
+      margin-bottom: 28px;
+  }
+
+  .skydesignsol-footer-blog-link {
+      font-size: 18px;
+      line-height: 26px;
+  }
+
+  .skydesignsol-location-card {
+      padding: 20px;
+  }
+
+  .skydesignsol-location-title {
+      font-size: 28px;
+  }
+
+  .skydesignsol-location-icon {
+      width: 100px;
+      height: 100px;
+  }
+
+  .skydesignsol-location-address {
+      font-size: 14px;
+  }
+
+  .skydesignsol-footer-main {
+      flex-direction: column;
+      gap: 32px;
+      align-items: center;
+  }
+
+  .skydesignsol-footer-brand {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      justify-content: center;
+  }
+
+  .skydesignsol-footer-nav {
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+  }
+
+  .skydesignsol-footer-social {
+      gap: 20px;
+      width: 100%;
+      justify-content: center;
+  }
+
+  .skydesignsol-social-group {
+      gap: 20px;
+  }
+
+  .skydesignsol-footer-legal {
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
+  }
+
+  .skydesignsol-legal-links {
+      flex-wrap: wrap;
+      gap: 16px;
+  }
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .skydesignsol-footer {
+      padding: 32px 16px 16px;
+  }
+
+  .skydesignsol-contact-title {
+      font-size: 28px;
+  }
+
+  .skydesignsol-contact-phone,
+  .skydesignsol-contact-email {
+      font-size: 20px;
+  }
+
+  .skydesignsol-calendly-background {
+      padding: 24px 16px;
+      min-height: 400px;
+  }
+
+  .skydesignsol-calendly-container {
+      height: 350px;
+  }
+
+  .skydesignsol-location-card {
+      padding: 16px;
+  }
+
+  .skydesignsol-location-title {
+      font-size: 24px;
+  }
+
+  .skydesignsol-location-icon {
+      width: 80px;
+      height: 80px;
+  }
+
+  .skydesignsol-footer-nav {
+      gap: 16px;
+      justify-content: center;
+  }
+
+  .skydesignsol-footer-link {
+      font-size: 14px;
+      padding: 8px;
+  }
+
+  .skydesignsol-social-link,
+  .skydesignsol-footer-cta {
+      width: 44px;
+      height: 44px;
+  }
+
+  .skydesignsol-social-icon {
+      width: 28px;
+      height: 28px;
+  }
+
+  .skydesignsol-cta-icon {
+      width: 28px;
+      height: 28px;
+  }
+
+  .skydesignsol-footer-main {
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+  }
+
+  .skydesignsol-footer-brand {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      justify-content: center;
+  }
+
+  .skydesignsol-footer-social {
+      justify-content: center;
+      gap: 16px;
+  }
+
+  .skydesignsol-social-group {
+      gap: 16px;
+  }
+
+  .skydesignsol-copyright,
+  .skydesignsol-legal-link {
+      font-size: 14px;
+  }
+}
+
+/* Ultra Small (≤320px) */
+@media (max-width: 320px) {
+  .skydesignsol-footer {
+      padding: 24px 12px 12px;
+  }
+
+  .skydesignsol-contact-title {
+      font-size: 24px;
+  }
+
+  .skydesignsol-contact-phone,
+  .skydesignsol-contact-email {
+      font-size: 18px;
+  }
+
+  .skydesignsol-calendly-background {
+      padding: 20px 12px;
+      min-height: 350px;
+  }
+
+  .skydesignsol-calendly-container {
+      height: 300px;
+  }
+
+  .skydesignsol-location-title {
+      font-size: 20px;
+  }
+
+  .skydesignsol-location-address {
+      font-size: 12px;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .skydesignsol-footer *,
+  .skydesignsol-footer *::before,
+  .skydesignsol-footer *::after {
+      animation: none !important;
+      transition: none !important;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .skydesignsol-footer {
+      background: #000000;
+  }
+
+  .skydesignsol-contact-title,
+  .skydesignsol-location-title,
+  .skydesignsol-location-address,
+  .skydesignsol-footer-link,
+  .skydesignsol-copyright {
+      color: #FFFFFF;
+  }
+
+  .skydesignsol-contact-phone {
+      color: #FFFF00;
+  }
+
+  .skydesignsol-contact-email {
+      color: #00FFFF;
+  }
+
+  .skydesignsol-location-card {
+    background: #333333;
+    border: 2px solid #FFFFFF;
+  }
+}

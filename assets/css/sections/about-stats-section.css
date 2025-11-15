@@ -1,0 +1,717 @@
+/* ============================================================
+   ABOUT STATS SECTION - Modular CSS
+   ============================================================ */
+
+.skydesignsol-about-stats {
+  margin: 0 !important;
+  padding-top: 80px !important;
+  padding-bottom: 80 !important;
+  position: relative;
+}
+
+/* Ensure navbar connects seamlessly to first section */
+.skydesignsol-navbar + .skydesignsol-about-stats {
+  margin-top: 0 !important;
+}
+
+/* Remove gaps between consecutive sections */
+.skydesignsol-about-stats + .skydesignsol-partners {
+  margin-top: 0 !important;
+}
+
+/* Override all responsive padding rules to maintain no gaps */
+@media (max-width: 1024px) {
+  .skydesignsol-about-stats {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .skydesignsol-about-stats {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .skydesignsol-about-stats {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+.skydesignsol-about-stats::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 293px;
+    right: -50px;
+    top: 61px;
+    background: url('../../img/img-ball.png') no-repeat center;
+    background-size: contain;
+    opacity: 0;
+    animation: skydesignsol-float-rotate-right 20s linear infinite, skydesignsol-fade-in-element 1s ease-out 0.5s forwards;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.skydesignsol-about-stats::after {
+    content: '';
+    position: absolute;
+    width: 385px;
+    height: 377px;
+    left: -100px;
+    top: 368px;
+    background: url('../../img/img-ball-2.svg') no-repeat center;
+    background-size: contain;
+    opacity: 0;
+    animation: skydesignsol-float-rotate-left 25s linear infinite, skydesignsol-fade-in-element 1s ease-out 0.7s forwards;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes skydesignsol-float-rotate-right {
+    0% { transform: rotate(0deg) translateY(0px); }
+    50% { transform: rotate(180deg) translateY(-20px); }
+    100% { transform: rotate(360deg) translateY(0px); }
+}
+
+@keyframes skydesignsol-float-rotate-left {
+    0% { transform: rotate(0deg) translateY(0px); }
+    50% { transform: rotate(-180deg) translateY(20px); }
+    100% { transform: rotate(-360deg) translateY(0px); }
+}
+
+@keyframes skydesignsol-revolve-clockwise {
+    0% {
+        transform: rotate(0deg) translateX(30px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(30px) rotate(-360deg);
+    }
+}
+
+@keyframes skydesignsol-fade-in-element {
+    to { opacity: 1; }
+}
+
+.skydesignsol-about-stats-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 40px 0; /* Add minimal vertical padding for content spacing */
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.skydesignsol-about-stats-header {
+    display: flex;
+    justify-content: flex-start;
+    opacity: 0;
+    animation: skydesignsol-slide-up 0.8s ease-out 0.2s forwards;
+    padding-top: 60px; /* Moved heading down */
+}
+
+@keyframes skydesignsol-slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skydesignsol-about-stats-title {
+    color: #0B4444;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 1.1;
+    max-width: 1130px;
+    margin: 0;
+}
+
+/* Typing cursor animation for About page heading */
+.skydesignsol-about-stats-title span[style*="color: rgb(184, 212, 50)"] {
+    font-weight: 400;
+    font-size: 1em;
+    line-height: inherit;
+    animation: skydesignsol-blink-caret 1s step-end infinite;
+    margin-left: 2px;
+}
+
+.skydesignsol-about-stats-description {
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0;
+    animation: skydesignsol-slide-up 0.8s ease-out 0.4s forwards;
+}
+
+.skydesignsol-about-stats-description p {
+    color: #161616;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.4;
+    max-width: 1015px;
+    margin: 0;
+}
+
+.skydesignsol-about-stats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    opacity: 0;
+    animation: skydesignsol-slide-up 0.8s ease-out 0.6s forwards;
+}
+
+.skydesignsol-about-stats-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.skydesignsol-about-stats-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    grid-template-rows: auto auto;
+}
+
+.skydesignsol-about-stats-left .skydesignsol-about-stat-card:nth-child(3) {
+    grid-column: 1 / -1;
+}
+
+.skydesignsol-about-stats-row-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skydesignsol-about-stat-card {
+    padding: 20px 16px !important;
+    gap: 12px !important;
+}
+
+.skydesignsol-about-stat-content {
+    gap: 7px !important;
+}
+
+.skydesignsol-about-stat-desc {
+    margin-top: 6px !important;
+}
+
+/* Further reduce about stats section background shapes on small mobile */
+.skydesignsol-about-stats::before {
+    width: 300px !important;
+    height: 300px !important;
+    right: -40px !important;
+    top: 20px !important;
+    opacity: 0.4 !important;
+}
+
+.skydesignsol-about-stats::after {
+    width: 300px !important;
+    height: 300px !important;
+    left: -50px !important;
+    top: 150px !important;
+    opacity: 0.4 !important;
+}
+
+.skydesignsol-about-stat-number {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 0.9;
+    margin: 0;
+    color: #0B4444;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skydesignsol-about-stat-white .skydesignsol-about-stat-desc {
+    color: #161616;
+}
+
+.skydesignsol-about-stat-green .skydesignsol-about-stat-desc {
+    color: #F4F5F5;
+}
+
+.skydesignsol-about-stats-image {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skydesignsol-about-stats-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(184, 212, 50, 0.1) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.skydesignsol-about-stats-image:hover::after {
+    opacity: 1;
+}
+
+.skydesignsol-about-stats-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skydesignsol-about-stats-image:hover img {
+    transform: scale(1.05);
+}
+
+/* ============================================================
+   PROFESSIONAL ENHANCEMENTS - Bootstrap Integration
+   ============================================================ */
+
+/* Stat Card Icon Styling */
+.skydesignsol-stat-icon {
+    font-size: 2.5rem;
+    color: #B8D432;
+    opacity: 0.2;
+    transition: all 0.3s ease;
+}
+
+.skydesignsol-about-stat-card:hover .skydesignsol-stat-icon {
+    opacity: 1;
+    transform: scale(1.1) rotate(5deg);
+    color: #B8D432;
+}
+
+/* Enhanced Stat Cards */
+.skydesignsol-about-stat-card {
+    padding: 2rem !important;
+    border-radius: 16px !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(5, 51, 51, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.skydesignsol-about-stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #B8D432 0%, #053333 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.skydesignsol-about-stat-card:hover::before {
+    transform: scaleX(1);
+}
+
+.skydesignsol-about-stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(5, 51, 51, 0.15) !important;
+    border-color: #B8D432;
+}
+
+/* Stat Numbers Enhanced */
+.skydesignsol-about-stat-number {
+    font-size: clamp(2.5rem, 4vw, 3.5rem) !important;
+    font-weight: 700 !important;
+    background: linear-gradient(135deg, #053333 0%, #B8D432 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+/* Stat Labels Enhanced */
+.skydesignsol-about-stat-label {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: #053333 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Stat Description Enhanced */
+.skydesignsol-about-stat-desc {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    color: #6c757d !important;
+}
+
+/* White Background Cards */
+.skydesignsol-about-stat-white {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+/* Accent Background Cards */
+.skydesignsol-about-stat-card:not(.skydesignsol-about-stat-white) {
+    background: linear-gradient(135deg, rgba(184, 212, 50, 0.1) 0%, rgba(5, 51, 51, 0.05) 100%);
+}
+
+/* Image Container Enhanced */
+.skydesignsol-about-stats-image {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.skydesignsol-about-stats-image img {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skydesignsol-about-stats-image:hover img {
+    transform: scale(1.05);
+}
+
+.skydesignsol-about-stats-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(5, 51, 51, 0.1) 0%, rgba(184, 212, 50, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.skydesignsol-about-stats-image:hover::after {
+    opacity: 1;
+}
+
+/* Title Styling */
+.skydesignsol-about-stats-title {
+    font-size: clamp(2rem, 5vw, 3.5rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+    color: #053333 !important;
+}
+
+.skydesignsol-highlight-word {
+    color: #B8D432 !important;
+    position: relative;
+    display: inline-block;
+}
+
+/* .skydesignsol-highlight-word::after {
+   content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #B8D432 0%, #053333 100%);
+    border-radius: 2px;
+    animation: underlinePulse 2s ease-in-out infinite;
+} */
+
+/* Description Styling */
+.skydesignsol-about-stats-description {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skydesignsol-about-stats-description .lead {
+    font-size: 1.15rem !important;
+    line-height: 1.8 !important;
+    font-weight: 400 !important;
+}
+
+/* Animation on Scroll */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skydesignsol-animate-in {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Staggered Animation for Cards */
+.skydesignsol-about-stat-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.skydesignsol-about-stat-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.skydesignsol-about-stat-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .skydesignsol-stat-icon {
+        font-size: 2rem;
+    }
+    
+    .skydesignsol-about-stat-card {
+        padding: 1.5rem !important;
+    }
+    
+    .skydesignsol-about-stats-image {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .skydesignsol-about-stats-title {
+        font-size: 2rem !important;
+    }
+    
+    .skydesignsol-stat-icon {
+        font-size: 1.75rem;
+    }
+    
+    .skydesignsol-about-stat-number {
+        font-size: 2rem !important;
+    }
+    
+    .skydesignsol-about-stats-image {
+        height: 300px;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skydesignsol-about-stat-card {
+        padding: 1.25rem !important;
+    }
+    
+    .skydesignsol-stat-icon {
+        font-size: 1.5rem;
+    }
+}
+
+/* ============================================================
+   TYPING ANIMATION & DESCRIPTION CARDS
+   ============================================================ */
+
+/* Typing Word Wrapper with Animated Underline */
+.skydesignsol-typing-word-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.skydesignsol-typing-word {
+    color: #B8D432 !important;
+    position: relative;
+    display: inline-block;
+    min-width: 200px;
+    text-align: left;
+    font-weight: 700;
+}
+
+/* Animated Underline Effect */
+/* .skydesignsol-typing-word-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #B8D432 0%, #053333 100%);
+    border-radius: 2px;
+    animation: underlinePulse 2s ease-in-out infinite;
+}
+
+@keyframes underlinePulse {
+    0%, 100% {
+        opacity: 0.6;
+        transform: scaleX(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scaleX(0.95);
+    }
+} */
+
+/* Description Cards */
+.skydesignsol-desc-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 1px solid rgba(5, 51, 51, 0.08);
+    border-radius: 16px;
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.skydesignsol-desc-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #B8D432 0%, #053333 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.skydesignsol-desc-card:hover::before {
+    transform: scaleX(1);
+}
+
+.skydesignsol-desc-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(5, 51, 51, 0.1);
+    border-color: rgba(184, 212, 50, 0.3);
+}
+
+/* Description Icon */
+.skydesignsol-desc-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(184, 212, 50, 0.1) 0%, rgba(5, 51, 51, 0.05) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.skydesignsol-desc-icon i {
+    font-size: 1.75rem;
+    color: #B8D432;
+    transition: transform 0.3s ease;
+}
+
+.skydesignsol-desc-card:hover .skydesignsol-desc-icon {
+    background: linear-gradient(135deg, #B8D432 0%, #053333 100%);
+    transform: scale(1.1) rotate(5deg);
+}
+
+.skydesignsol-desc-card:hover .skydesignsol-desc-icon i {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* Description Title */
+.skydesignsol-desc-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #053333;
+    margin-bottom: 1rem;
+}
+
+/* Description Text */
+.skydesignsol-desc-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #6c757d;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .skydesignsol-desc-card {
+        padding: 1.5rem;
+    }
+    
+    .skydesignsol-desc-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .skydesignsol-desc-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .skydesignsol-typing-word {
+        min-width: 150px;
+    }
+}
+
+/* ============================================================
+   UNIFIED TITLE DESIGN - Better Visual Flow
+   ============================================================ */
+
+/* Title Wrapper */
+.skydesignsol-title-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Single H1 with Multiple Lines */
+.skydesignsol-about-stats-title {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+/* Individual Title Lines */
+.skydesignsol-title-line {
+    display: block;
+    line-height: 1.3;
+}
+
+/* Second Line Styling */
+.skydesignsol-title-line-2 {
+    opacity: 0.95;
+    font-weight: 600;
+}
+
+/* Visual Separator - Removed (Not needed) */
+.skydesignsol-title-separator {
+    display: none;
+}
+
+/* Enhanced Highlight for "your brand" */
+.skydesignsol-highlight-word {
+    position: relative;
+    display: inline-block;
+    padding: 0 0.2em;
+}
+
+/* Responsive Title Adjustments */
+@media (max-width: 768px) {
+    .skydesignsol-about-stats-title {
+        gap: 0.75rem;
+    }
+    
+    .skydesignsol-title-separator {
+        width: 60px;
+        height: 3px;
+    }
+    
+    .skydesignsol-title-line {
+        font-size: 1.75rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .skydesignsol-about-stats-title {
+        gap: 0.5rem;
+    }
+    
+    .skydesignsol-title-separator {
+        width: 50px;
+        margin: 0.25rem auto;
+    }
+}

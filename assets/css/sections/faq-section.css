@@ -1,0 +1,338 @@
+/* ===================================
+   CONTACT PAGE - FAQ SECTION
+   Sky Design Solutions
+   =================================== */
+
+/* FAQ Section */
+.skydesignsol-faq {
+    background: linear-gradient(135deg, #053333 0%, #074747 100%);
+    padding: 120px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skydesignsol-faq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* FAQ Decorations */
+.skydesignsol-faq-decoration {
+    position: absolute;
+    width: clamp(200px, 25vw, 400px);
+    height: auto;
+    pointer-events: none;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.skydesignsol-faq-decoration-left {
+    top: 10%;
+    left: -10%;
+    animation: float-left 6s ease-in-out infinite;
+}
+
+.skydesignsol-faq-decoration-right {
+    bottom: 10%;
+    right: -10%;
+    animation: float-right 7s ease-in-out infinite;
+}
+
+/* FAQ Title */
+.skydesignsol-faq-title {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 700;
+    color: #B8D432;
+    text-align: center;
+    margin: 0 0 60px 0;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* FAQ List */
+.skydesignsol-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* FAQ Item */
+.skydesignsol-faq-item {
+    background: rgba(244, 245, 245, 0.05);
+    border: 2px solid rgba(244, 245, 245, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation: fadeInUp 0.8s ease-out both;
+}
+
+.skydesignsol-faq-item:nth-child(1) { animation-delay: 0.1s; }
+.skydesignsol-faq-item:nth-child(2) { animation-delay: 0.2s; }
+.skydesignsol-faq-item:nth-child(3) { animation-delay: 0.3s; }
+.skydesignsol-faq-item:nth-child(4) { animation-delay: 0.4s; }
+.skydesignsol-faq-item:nth-child(5) { animation-delay: 0.5s; }
+.skydesignsol-faq-item:nth-child(6) { animation-delay: 0.6s; }
+
+.skydesignsol-faq-item:hover {
+    background: rgba(184, 212, 50, 0.05);
+    border-color: rgba(184, 212, 50, 0.3);
+    transform: translateX(8px);
+}
+
+.skydesignsol-faq-item-open {
+    background: rgba(184, 212, 50, 0.1);
+    border-color: #B8D432;
+}
+
+/* FAQ Question Button */
+.skydesignsol-faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 24px 28px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.skydesignsol-faq-question:hover {
+    background: rgba(184, 212, 50, 0.05);
+}
+
+.skydesignsol-faq-question-text {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(18px, 2.5vw, 22px);
+    font-weight: 600;
+    color: #F4F5F5;
+    line-height: 1.4;
+    flex: 1;
+}
+
+/* FAQ Icon */
+.skydesignsol-faq-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(184, 212, 50, 0.2);
+    border-radius: 50%;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skydesignsol-faq-question:hover .skydesignsol-faq-icon {
+    background: #B8D432;
+    transform: rotate(90deg);
+}
+
+.skydesignsol-faq-item-open .skydesignsol-faq-icon {
+    background: #B8D432;
+    transform: rotate(45deg);
+}
+
+.skydesignsol-faq-icon svg {
+    stroke: #F4F5F5;
+    transition: stroke 0.3s ease;
+}
+
+.skydesignsol-faq-item-open .skydesignsol-faq-icon svg {
+    stroke: #053333;
+}
+
+/* FAQ Answer */
+.skydesignsol-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Note: max-height is set dynamically by JavaScript for smooth animations */
+
+.skydesignsol-faq-answer-content {
+    padding: 0 28px 28px 28px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.skydesignsol-faq-answer-content p {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(15px, 2vw, 18px);
+    line-height: 1.7;
+    color: rgba(244, 245, 245, 0.85);
+    margin: 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float-left {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(-20px, -10px) rotate(5deg);
+    }
+    50% {
+        transform: translate(-10px, 20px) rotate(-5deg);
+    }
+    75% {
+        transform: translate(-30px, 10px) rotate(3deg);
+    }
+}
+
+@keyframes float-right {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(20px, 10px) rotate(-5deg);
+    }
+    50% {
+        transform: translate(10px, -20px) rotate(5deg);
+    }
+    75% {
+        transform: translate(30px, -10px) rotate(-3deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skydesignsol-faq {
+        padding: 80px 20px;
+    }
+
+    .skydesignsol-faq-title {
+        margin-bottom: 40px;
+    }
+
+    .skydesignsol-faq-question {
+        padding: 20px 20px;
+        gap: 16px;
+    }
+
+    .skydesignsol-faq-answer-content {
+        padding: 0 20px 20px 20px;
+    }
+
+    .skydesignsol-faq-decoration {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .skydesignsol-faq {
+        padding: 60px 16px;
+    }
+
+    .skydesignsol-faq-list {
+        gap: 16px;
+    }
+
+    .skydesignsol-faq-question {
+        padding: 16px;
+    }
+
+    .skydesignsol-faq-answer-content {
+        padding: 0 16px 16px 16px;
+    }
+
+    .skydesignsol-faq-icon {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* ===================================
+   LIGHT THEME FAQ SECTION
+   =================================== */
+
+/* Light Theme Background */
+.skydesignsol-faq-light {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F4F5F5 100%);
+}
+
+/* Light Theme Title */
+.skydesignsol-faq-light .skydesignsol-faq-title {
+    color: #053333;
+}
+
+/* Light Theme FAQ Items */
+.skydesignsol-faq-light .skydesignsol-faq-item {
+    background: rgba(5, 51, 51, 0.02);
+    border: 2px solid rgba(5, 51, 51, 0.08);
+}
+
+.skydesignsol-faq-light .skydesignsol-faq-item:hover {
+    background: rgba(184, 212, 50, 0.08);
+    border-color: rgba(184, 212, 50, 0.4);
+}
+
+.skydesignsol-faq-light .skydesignsol-faq-item-open {
+    background: rgba(184, 212, 50, 0.12);
+    border-color: #B8D432;
+}
+
+/* Light Theme Question Button */
+.skydesignsol-faq-light .skydesignsol-faq-question:hover {
+    background: rgba(184, 212, 50, 0.05);
+}
+
+.skydesignsol-faq-light .skydesignsol-faq-question-text {
+    color: #053333;
+}
+
+/* Light Theme Icon */
+.skydesignsol-faq-light .skydesignsol-faq-icon {
+    background: rgba(184, 212, 50, 0.15);
+}
+
+.skydesignsol-faq-light .skydesignsol-faq-question:hover .skydesignsol-faq-icon {
+    background: #B8D432;
+}
+
+.skydesignsol-faq-light .skydesignsol-faq-item-open .skydesignsol-faq-icon {
+    background: #B8D432;
+}
+
+.skydesignsol-faq-light .skydesignsol-faq-icon svg {
+    stroke: #053333;
+}
+
+.skydesignsol-faq-light .skydesignsol-faq-item-open .skydesignsol-faq-icon svg {
+    stroke: #FFFFFF;
+}
+
+/* Light Theme Answer Text */
+.skydesignsol-faq-light .skydesignsol-faq-answer-content p {
+    color: rgba(5, 51, 51, 0.85);
+}
+
+/* Light Theme Decorations */
+.skydesignsol-faq-light .skydesignsol-faq-decoration {
+    opacity: 0.3;
+    filter: brightness(1.2) contrast(0.8);
+}
